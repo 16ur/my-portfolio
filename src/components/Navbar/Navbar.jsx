@@ -1,30 +1,16 @@
 import "./Navbar.css";
-import amLogo from "../../assets/logo2.png";
+
 function Navbar() {
   return (
-    <>
-      <nav className="navBar">
-        <div className="navbarLeft">
-          <img src={amLogo} className="amLogoClass" alt="am-logo" />
-        </div>
-
-        <div className="navbarRight">
-          <ul className="navLinks"></ul>
-          <li>
-            <a href="/about">about</a>
-          </li>
-          <li>
-            <a href="/parcours">parcours</a>
-          </li>
-          <li>
-            <a href="/projets">projets</a>
-          </li>
-          <li>
-            <a href="/contact">contact</a>
-          </li>
-        </div>
+      <nav className="sidebar">
+        <ul className="navLinks">
+          <li><a href="#home">accueil</a></li>
+          <li><a href="#aboutme">about me</a></li>
+          <li><a href="#work">parcours</a></li>
+          <li><a href="#background">projets</a></li>
+          <li><a href="#about">contact</a></li>
+        </ul>
       </nav>
-    </>
   );
 }
 

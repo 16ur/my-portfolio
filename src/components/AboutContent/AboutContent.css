@@ -1,24 +1,63 @@
+/* Conteneur principal */
 .aboutContent {
+  padding: 50px 20px;
+  background-color: #1f1f1f;
+  color: white;
+  font-family: "Poppins", sans-serif;
   width: 100%;
-  color: white;
-  display: block;
-  justify-content: center;
+  min-height: 70vh;
+}
+
+.progColor{
+  color: #ecdfcc; 
+}
+
+
+.aboutTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
   text-align: center;
-  background-color: #161616;
+  margin-bottom: 30px;
+  color: #ecdfcc; 
+
 }
 
-.aboutContent h1 {
-  font-weight: 500;
-}
-
-.aboutText {
-  color: white;
+/* Conteneur pour l'image et le texte */
+.aboutContentContainer {
   display: flex;
-  justify-content: center;
-  background-color: grey;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
   max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-  padding: 20px;
+  margin: 0 auto;
+}
+
+/* Image */
+.aboutContentImage img {
+  width: 90%;
+  max-width: 400px;
   border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+/* Texte */
+.aboutContentText {
+  flex: 1;
+  font-size: 1rem;
+  line-height: 1.8;
+}
+
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .aboutContentContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .aboutContentImage img {
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
 }

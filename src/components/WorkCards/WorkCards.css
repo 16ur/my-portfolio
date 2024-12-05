@@ -1,0 +1,111 @@
+/* Conteneur principal */
+.workCards {
+    padding: 50px 20px;
+    background-color: #1f1f1f;
+    color: white;
+    font-family: "Roboto", sans-serif;
+  }
+  
+  /* Titre de section */
+  .workTitle {
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 40px;
+    color: #ecdfcc;
+  }
+  
+  /* Conteneur des cartes */
+  .workCardsContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  /* Carte */
+  .workCard {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+    background-color: #2b2b2b;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+  }
+  
+  /* Logo dans la carte */
+  .workCardLogo img {
+    width: 80px;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+  }
+  
+  /* Contenu de la carte */
+  .workCardContent {
+    flex: 1;
+  }
+  
+  /* Titre du poste */
+  .workCardContent h2 {
+    font-size: 1.5rem;
+    color: white;
+  }
+
+
+  .date{
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ecdfcc;
+    margin-bottom: 5px;
+  }
+  
+  /* Entreprise */
+  .company {
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ecdfcc;
+    margin-bottom: 5px;
+  }
+  
+  /* Localisation */
+  .location {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #888;
+    margin-bottom: 15px;
+  }
+  
+  /* Description */
+  .description {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #ddd;
+  }
+  
+  /* Highlight dans la description */
+  .highlight {
+    color: #ecdfcc;
+    font-weight: bold;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .workCard {
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+  
+    .workCardLogo img {
+      width: 60px;
+      margin-bottom: 10px;
+    }
+  
+    .workCardContent h2 {
+      font-size: 1.3rem;
+    }
+  }
+  

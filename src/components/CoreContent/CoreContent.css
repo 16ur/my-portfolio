@@ -1,88 +1,95 @@
 .coreContent {
   display: flex;
   justify-content: center;
-  width: 100%;
-  height: 100vh;
-  position: relative;
-  margin-top: -30px;
-}
-
-.pdpLogoClass {
-  width: 300px;
-  height: auto;
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 20px;
+  align-items: center;
+  height: 100%;
+  text-align: center;
+  background-color: #1f1f1f;
+  color: white;
+  padding: 0 20px;
+  padding-top: 10rem;
 }
 
 .textContainer {
-  color: white;
-  flex-direction: column;
+  max-width: 800px;
+  min-height: 70vh;
+  width: 100%;
 }
 
 .coreContentTitle {
-  font-family: "Roboto", sans-serif;
+  font-size: 3rem;
   font-weight: 700;
-  font-size: 1.7rem;
-  margin: 0;
+  margin-bottom: 20px;
+  line-height: 1.2;
 }
 
-h2 {
-  font-family: "Roboto", sans-serif;
+.coreContentSubtitle {
+  font-size: 1.5rem;
   font-weight: 400;
-  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
-.statusEtude {
+.description {
+  font-size: 1rem;
+  line-height: 1.6;
+  margin-bottom: 30px;
+}
+
+.buttonsContainer {
   display: flex;
   justify-content: center;
+  gap: 15px;
 }
 
-.colorText {
-  color: #ecdfcc;
-}
-
-.myIcons {
-  color: #ecdfcc;
-  list-style: none;
-  display: flex;
-  justify-content: center;
-}
-
-.myIcons li {
-  margin-right: 1.5rem;
-  background-color: transparent;
-}
-
-.myIcons a:hover {
-  color: white;
-  cursor: pointer;
-}
-a:visited {
-  color: #ecdfcc;
-}
-
-.downloadCV {
-  display: flex;
-  justify-content: center;
-}
-
-.downloadCVButton {
-  background-color: #1f1f1f;
-  color: #ecdfcc;
-  border: 1px solid #ecdfcc;
+.primaryButton,
+.secondaryButton {
+  padding: 12px 24px;
+  border: none;
   border-radius: 5px;
-  padding: 10px 20px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
-  font-size: 1.1rem;
-  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
 }
 
-.downloadCVButton:hover {
-  background-color: #ecdfcc;
+.primaryButton {
+  background-color: transparent;
+  border: 1px solid #ecdfcc;
+  color: #ecdfcc;
+}
+
+.primaryButton:hover {
+  background-color: #cbbeaa;
   color: #1f1f1f;
-  cursor: pointer;
-  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.secondaryButton {
+  background-color: #cbbeaa;
+  color: #1f1f1f;
+}
+
+.secondaryButton:hover {
+  background-color: #bca788;
+  color: #1f1f1f;
+}
+
+.colorText{
+  color: #ecdfcc;
+}
+
+
+
+@media (max-width: 768px) {
+  .coreContentTitle {
+    font-size: 2.5rem;
+  }
+
+  .coreContentSubtitle {
+    font-size: 1.2rem;
+  }
+
+  .description {
+    font-size: 0.9rem;
+  }
+
 }

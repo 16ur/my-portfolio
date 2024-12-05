@@ -1,58 +1,54 @@
-body {
-  margin: 0;
-  padding: 0;
-}
 
-.amLogoClass {
-  height: 70%;
-  width: 30%;
-  margin-left: 10px;
-}
 
-.navBar {
+/* Barre latérale gauche */
+.sidebar {
+  width: 200px;
+  height: 100vh;
   display: flex;
-  justify-content: space-between;
-  height: 10em;
-  margin: 0 auto;
-  max-width: 1100px;
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
+  position: fixed;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  line-height: 1.5;
 }
 
-.navbarRight {
-  list-style-type: none;
-  display: flex;
-  font-size: 1.1rem;
-  font-family: "Roboto", sans-serif;
-  font-weight: 500;
+.navLinks {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: left;
 }
 
-.navbarRight li {
-  margin-right: 1rem;
+.navLinks li {
+  margin: 10px 0;
 }
-.navbarRight a {
-  position: relative;
+
+.navLinks a {
   text-decoration: none;
+  color: #555;
+  font-size: 1.2rem;
+  transition: color 0.3s;
+}
+
+.navLinks a:hover {
   color: #ecdfcc;
 }
 
-.navbarRight a:hover {
-  color: white;
-  cursor: pointer;
+/* Contenu principal */
+.mainContent {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.navbarRight a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  display: block;
-  margin-top: 3px;
-  right: 0;
-  background: white;
-  transition: width 0.2s ease, left 0.2s ease;
-}
-
-.navbarRight a:hover::after {
-  width: 100%;
-  left: 0;
+.mainContent h1 {
+  font-size: 2.5rem;
+  line-height: 1.5;
+  max-width: 800px;
 }
