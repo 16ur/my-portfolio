@@ -11,7 +11,7 @@ function Navbar() {
         <div className="navbarRight">
           <ul className="navLinks"></ul>
           <li>
-            <a href="/about">about</a>
+            <a href="#aboutme">about</a>
           </li>
           <li>
             <a href="/parcours">parcours</a>
