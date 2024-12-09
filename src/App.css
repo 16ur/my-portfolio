@@ -6,3 +6,10 @@ body {
   background-color: #1f1f1f;
   overflow-x:hidden;
 }
+
+@media (max-width: 1180px) {
+  *{
+    overflow-x: hidden;
+  }
+
+}

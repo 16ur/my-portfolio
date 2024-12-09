@@ -11,12 +11,12 @@ function CoreContent() {
         <h2 className="coreContentSubtitle">
           Développeur Web Full-Stack basé en France 🇫🇷
         </h2>
-        <p className="description">
+        <p className="descriptionCore">
           J'adore créer des interfaces modernes et des sites web interactifs,
           en me concentrant sur des expériences utilisateur optimales.
         </p>
         <div className="buttonsContainer">
-          <a href="#projects">
+          <a href="#aboutme">
             <button className="primaryButton">À propos de moi 🚀</button>
           </a>
           <a href={CV} download>

@@ -1,4 +1,3 @@
-/* Conteneur principal */
 .aboutContent {
   padding: 50px 20px;
   background-color: #1f1f1f;
@@ -22,7 +21,6 @@
 
 }
 
-/* Conteneur pour l'image et le texte */
 .aboutContentContainer {
   display: flex;
   align-items: center;
@@ -32,7 +30,6 @@
   margin: 0 auto;
 }
 
-/* Image */
 .aboutContentImage img {
   width: 90%;
   max-width: 400px;
@@ -40,7 +37,6 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
 }
 
-/* Texte */
 .aboutContentText {
   flex: 1;
   font-size: 1rem;
@@ -49,7 +45,6 @@
 
 
 
-/* Responsive Design */
 @media (max-width: 768px) {
   .aboutContentContainer {
     flex-direction: column;

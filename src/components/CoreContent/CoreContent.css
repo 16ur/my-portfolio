@@ -2,22 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100%;
+  height: 100vh;
+  width: 100vw; 
   text-align: center;
   background-color: #1f1f1f;
   color: white;
   padding: 0 20px;
-  padding-top: 10rem;
+  overflow: hidden; 
 }
 
 .textContainer {
-  max-width: 800px;
-  min-height: 70vh;
+  max-width: 750px;
   width: 100%;
+  min-height: 70vh; 
+  display: flex;
+  flex-direction: column;
+  justify-content: center; 
+  align-items: center; 
 }
 
 .coreContentTitle {
-  font-size: 3rem;
+  font-size: 2.7rem;
   font-weight: 700;
   margin-bottom: 20px;
   line-height: 1.2;
@@ -29,10 +34,11 @@
   margin-bottom: 20px;
 }
 
-.description {
-  font-size: 1rem;
+.descriptionCore {
+  font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 30px;
+  text-align: center; 
 }
 
 .buttonsContainer {
@@ -73,13 +79,12 @@
   color: #1f1f1f;
 }
 
-.colorText{
+.colorText {
   color: #ecdfcc;
 }
 
-
-
 @media (max-width: 768px) {
+
   .coreContentTitle {
     font-size: 2.5rem;
   }
@@ -92,4 +97,8 @@
     font-size: 0.9rem;
   }
 
+  .buttonsContainer {
+    flex-direction: column;
+    gap: 10px;
+  }
 }

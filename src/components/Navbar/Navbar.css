@@ -52,3 +52,29 @@
   line-height: 1.5;
   max-width: 800px;
 }
+
+
+@media (max-width: 768px) {
+  .sidebar {
+    display: none ;
+  }
+
+  .navLinks {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .navLinks li {
+    margin: 0;
+  }
+
+  .navLinks a {
+    font-size: 1.5rem;
+  }
+
+  .mainContent h1 {
+    font-size: 2rem;
+  } 
+
+}

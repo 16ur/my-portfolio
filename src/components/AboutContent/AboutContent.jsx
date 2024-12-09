@@ -4,7 +4,7 @@ import aboutMe from "../../assets/aboutMePic.jpg";
 function AboutContent() {
   return (
     <div className="aboutContent" id="aboutme">
-      <h1 className="aboutTitle">A propos de moi</h1>
+      <h1 className="aboutTitle">À propos de moi</h1>
       <div className="aboutContentContainer">
         <div className="aboutContentImage">
           <img src={aboutMe} alt="aboutMe" />
