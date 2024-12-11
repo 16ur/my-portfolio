@@ -8,7 +8,7 @@ function WorkCards() {
                 <div className="workCard">
                     <div className="workCardContent">
                         <h2>Alertance Développeur Web</h2>
-                        <p className="date">Septembre 2024 - Maintenant</p>
+                        <p className="date">Septembre 2024 - Janvier 2025</p>
                         <p className="company">Winlink Systems</p>
                         <p className="location">Marseille, France</p>
                         <p className="description">
