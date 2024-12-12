@@ -1,5 +1,5 @@
 import "./CoreContent.css";
-import CV from "../../assets/CV_AXEL_MANGUIAN_2024-2025.pdf";
+import CV from "../../assets/CV_AXEL_MANGUIAN.pdf";
 
 function CoreContent() {
   return (
