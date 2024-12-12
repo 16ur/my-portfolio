@@ -2,13 +2,11 @@
   background-color: #1f1f1f;
   color: white;
   font-family: "Poppins", sans-serif;
-  min-height: 70vh;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   text-align: center;
-  padding: 0 20px;
+  padding: 20px;
   overflow: hidden;
-  margin-bottom: 100px;
 }
 
 .progColor {
@@ -43,6 +41,21 @@
   flex: 1;
   font-size: 1rem;
   line-height: 1.8;
+  text-align: justify;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+@media (max-width: 1024px) {
+  .aboutContentContainer {
+    gap: 30px;
+  }
+
+  .aboutContentText {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    text-align: justify;
+  }
 }
 
 @media (max-width: 768px) {
@@ -54,5 +67,30 @@
   .aboutContentImage img {
     max-width: 300px;
     margin-bottom: 20px;
+  }
+
+  .aboutContentText {
+    text-align: center;
+    font-size: 0.9rem;
+    line-height: 1.6;
+    padding: 0 10px;
+    text-align: justify;
+  }
+
+  .aboutTitle {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .aboutTitle {
+    font-size: 1.8rem;
+  }
+
+  .aboutContentText {
+    font-size: 0.85rem;
+    line-height: 1.5;
+    padding: 0 15px;
+    text-align: justify;
   }
 }

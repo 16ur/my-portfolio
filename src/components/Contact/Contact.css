@@ -6,10 +6,10 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   width: 100vw;
   text-align: center;
-  padding: 0 20px;
+  padding: 20px;
   overflow: hidden;
 }
 
@@ -17,12 +17,13 @@
   font-size: 2.5rem;
   font-weight: bold;
   color: #ecdfcc;
+  margin-bottom: 10px;
 }
 
 .alternanceText {
   color: white;
   text-decoration: underline;
-  margin-top: -10px;
+  margin-bottom: 20px;
 }
 
 .contactContainer {
@@ -42,6 +43,7 @@
   padding: 20px;
   border-radius: 10px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+  text-align: left;
 }
 
 .contactForm h2 {
@@ -132,13 +134,64 @@
   color: #5348cc;
 }
 
+@media (max-width: 1024px) {
+  .contactContainer {
+    gap: 30px;
+  }
+
+  .contactForm {
+    max-width: 450px;
+  }
+
+  .contactInfo {
+    max-width: 350px;
+  }
+}
+
 @media (max-width: 768px) {
   .contactContainer {
     flex-direction: column;
+    gap: 20px;
   }
 
   .contactForm,
   .contactInfo {
     max-width: 100%;
+    text-align: center;
+  }
+
+  .contactInfo h2 {
+    font-size: 1.3rem;
+  }
+
+  .socialIcons a {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactTitle {
+    font-size: 2rem;
+  }
+
+  .contactForm {
+    padding: 15px;
+  }
+
+  .contactInfo h2 {
+    font-size: 1.2rem;
+  }
+
+  .contactInfo p {
+    font-size: 0.9rem;
+  }
+
+  .socialIcons a {
+    font-size: 0.9rem;
+  }
+
+  .submitButton {
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
 }

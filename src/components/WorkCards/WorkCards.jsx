@@ -7,14 +7,14 @@ function WorkCards() {
       <div className="workCardsContainer">
         <div className="workCard">
           <div className="workCardContent">
-            <h2>Alertance Développeur Web</h2>
+            <h2>Alertance Développeur Web Back-end</h2>
             <p className="date">Septembre 2024 - Décembre 2024</p>
             <p className="company">Winlink Systems</p>
             <p className="location">Marseille, France</p>
             <p className="description">
-              Actuellement en alternance chez{" "}
+              J'ai réalisé une alternance de 4 mois chez{" "}
               <span className="highlight">Winlink Systems</span> en tant que
-              développeur web, je m'occupe de la maintenance corrective et
+              développeur web, où je m'occupais de la maintenance corrective et
               évolutive de la plateforme ainsi que de la participation au
               support logiciel.
             </p>
