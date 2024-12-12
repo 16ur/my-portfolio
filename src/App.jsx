@@ -5,7 +5,8 @@ import Navbar from "./components/Navbar/Navbar";
 import CoreContent from "./components/CoreContent/CoreContent";
 import AboutContent from "./components/AboutContent/AboutContent";
 import WorkCards from "./components/WorkCards/WorkCards";
-
+import Projects from "./components/Projects/Projects";
+import Contact from "./components/Contact/Contact";
 function App() {
   return (
     <>
@@ -14,6 +15,8 @@ function App() {
       <CoreContent />
       <AboutContent />
       <WorkCards />
+      <Projects />
+      <Contact />
     </>
   );
 }

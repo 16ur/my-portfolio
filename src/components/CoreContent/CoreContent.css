@@ -1,26 +1,29 @@
+/* Conteneur principal */
 .coreContent {
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  width: 100vw; 
+  width: 100vw;
   text-align: center;
   background-color: #1f1f1f;
   color: white;
   padding: 0 20px;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
+/* Conteneur de texte */
 .textContainer {
   max-width: 750px;
   width: 100%;
-  min-height: 70vh; 
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
-  justify-content: center; 
-  align-items: center; 
+  justify-content: center;
+  align-items: center;
 }
 
+/* Titre principal */
 .coreContentTitle {
   font-size: 2.7rem;
   font-weight: 700;
@@ -28,25 +31,29 @@
   line-height: 1.2;
 }
 
+/* Sous-titre */
 .coreContentSubtitle {
   font-size: 1.5rem;
   font-weight: 400;
   margin-bottom: 20px;
 }
 
+/* Description */
 .descriptionCore {
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  text-align: center; 
+  text-align: center;
 }
 
+/* Conteneur des boutons */
 .buttonsContainer {
   display: flex;
   justify-content: center;
   gap: 15px;
 }
 
+/* Boutons */
 .primaryButton,
 .secondaryButton {
   padding: 12px 24px;
@@ -79,26 +86,73 @@
   color: #1f1f1f;
 }
 
+/* Accent de texte */
 .colorText {
   color: #ecdfcc;
 }
 
-@media (max-width: 768px) {
+/* Media Queries pour le responsive */
+@media (max-width: 1024px) {
+  .coreContent {
+    padding: 0;
+  }
 
   .coreContentTitle {
     font-size: 2.5rem;
   }
 
   .coreContentSubtitle {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
   }
 
-  .description {
+  .descriptionCore {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .coreContent {
+    padding: 0;
+  }
+
+  .textContainer {
+    padding: 0 15px;
+  }
+
+  .coreContentTitle {
+    font-size: 2.2rem;
+  }
+
+  .coreContentSubtitle {
+    font-size: 1.1rem;
+  }
+
+  .descriptionCore {
     font-size: 0.9rem;
   }
 
   .buttonsContainer {
     flex-direction: column;
     gap: 10px;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%; /* Les boutons prennent toute la largeur */
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .coreContentTitle {
+    font-size: 1.8rem;
+  }
+
+  .coreContentSubtitle {
+    font-size: 1rem;
+  }
+
+  .descriptionCore {
+    font-size: 0.85rem;
   }
 }

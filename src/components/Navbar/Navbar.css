@@ -1,8 +1,6 @@
-
-
 /* Barre latérale gauche */
 .sidebar {
-  width: 200px;
+  width: 120px;
   height: 100vh;
   display: flex;
   flex-direction: column;
@@ -53,10 +51,9 @@
   max-width: 800px;
 }
 
-
 @media (max-width: 768px) {
   .sidebar {
-    display: none ;
+    display: none;
   }
 
   .navLinks {
@@ -75,6 +72,5 @@
 
   .mainContent h1 {
     font-size: 2rem;
-  } 
-
+  }
 }

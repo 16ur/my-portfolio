@@ -1,0 +1,144 @@
+.contactPage {
+  background-color: #1f1f1f;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  text-align: center;
+  padding: 0 20px;
+  overflow: hidden;
+}
+
+.contactTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #ecdfcc;
+}
+
+.alternanceText {
+  color: white;
+  text-decoration: underline;
+  margin-top: -10px;
+}
+
+.contactContainer {
+  display: flex;
+  gap: 50px;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.contactForm {
+  flex: 1;
+  max-width: 500px;
+  background-color: #2b2b2b;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.contactForm h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ecdfcc;
+}
+
+.formGroup {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 1rem;
+  color: #ecdfcc;
+}
+
+.formGroup input,
+.formGroup textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #888;
+  background-color: #1f1f1f;
+  color: white;
+  font-size: 1rem;
+}
+
+.formGroup input:focus,
+.formGroup textarea:focus {
+  border-color: #6c63ff;
+  outline: none;
+}
+
+.submitButton {
+  background-color: #6c63ff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 1rem;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+  background-color: #5348cc;
+}
+
+.contactInfo {
+  flex: 1;
+  max-width: 400px;
+}
+
+.contactInfo h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: #ecdfcc;
+}
+
+.contactInfo p {
+  margin: 10px 0;
+  color: #ddd;
+}
+
+.contactInfo a {
+  color: #6c63ff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.contactInfo a:hover {
+  color: #5348cc;
+}
+
+.socialIcons a {
+  display: inline-block;
+  margin-right: 10px;
+  font-size: 1.1rem;
+  color: #6c63ff;
+  text-decoration: none;
+}
+
+.socialIcons a:hover {
+  color: #5348cc;
+}
+
+@media (max-width: 768px) {
+  .contactContainer {
+    flex-direction: column;
+  }
+
+  .contactForm,
+  .contactInfo {
+    max-width: 100%;
+  }
+}
