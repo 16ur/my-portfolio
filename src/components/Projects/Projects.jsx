@@ -26,6 +26,13 @@ function Projects() {
         "Réalisé dans le cadre de ma formation, Finder est un site web réalisé en groupe, permettant de mettre en relation des particuliers et des professionnels afin de rendre des services.",
       link: null,
     },
+    {
+      id: 4,
+      title: "nearMTP",
+      description:
+        "nearMTP est une application web permettant aux utilisateurs de rechercher des activités autour de Montpellier. Elle offre une interface permettant d'explorer, de filtrer et découvrir des activités locales.",
+      link: "https://github.com/16ur/nearMTP",
+    },
   ];
 
   const handleLinkClick = (link) => {
