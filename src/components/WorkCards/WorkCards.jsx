@@ -7,28 +7,6 @@ function WorkCards() {
       <div className="workCardsContainer">
         <div className="workCard">
           <div className="workCardContent">
-            <h2>Alternance Développeur Mobile</h2>
-            <p className="date">Janvier 2025 - Aujourd'hui</p>
-            <p className="company">Kouer</p>
-            <p className="location">Full remote</p>
-            <p className="description">
-              Je suis actuellement en alternance chez{" "}
-              <span className="highlight">Kouer</span> en tant que développeur
-              d'application mobile. Je m'occupe alors de la réalisation d'une
-              market place, à l'image du site{" "}
-              <a
-                href="https://www.kouer.fr/"
-                target="_blank"
-                className="highlight"
-                rel="noopener noreferrer"
-              >
-                Kouer.fr
-              </a>
-            </p>
-          </div>
-        </div>
-        <div className="workCard">
-          <div className="workCardContent">
             <h2>Alternance Développeur Web Back-end</h2>
             <p className="date">Septembre 2024 - Décembre 2024</p>
             <p className="company">Winlink Systems</p>
