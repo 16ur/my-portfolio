@@ -53,7 +53,7 @@ function Projects() {
   return (
     <div className="projectsPage">
       <h1 className="projectsTitle" id="projects">
-        PROJECTS
+        PROJETS
       </h1>
       <div className="projectsContainer">
         {projects.map((project) => (
