@@ -1,9 +1,9 @@
 .workCards {
   background-color: #1f1f1f;
   color: white;
-  font-family: "Roboto", sans-serif;
+  font-family: "Poppins", sans-serif;
   min-height: 100vh;
-  padding: 20px;
+  padding: 50px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -16,14 +16,56 @@
   text-align: center;
   margin-bottom: 40px;
   color: #ecdfcc;
+  border-bottom: 3px solid #ecdfcc;
+  display: inline-block;
+  padding-bottom: 10px;
 }
 
-.workCardsContainer {
+.filterButtons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.filterButton {
+  background: transparent;
+  border: 2px solid #ecdfcc;
+  color: #ecdfcc;
+  padding: 10px 15px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.filterButton:hover,
+.filterButton.active {
+  background: #ecdfcc;
+  color: #1f1f1f;
+}
+
+.timeline {
   display: flex;
   flex-direction: column;
   gap: 30px;
+  position: relative;
   max-width: 800px;
   width: 100%;
+}
+
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  width: 5px;
+  height: 100%;
+  background: #ecdfcc;
+  border-radius: 5px;
 }
 
 .workCard {
@@ -36,21 +78,37 @@
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
   width: 100%;
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.workCardLogo img {
-  width: 80px;
-  height: auto;
-  border-radius: 5px;
-  object-fit: cover;
+.workCard:hover {
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+}
+
+.workIcon {
+  width: 40px;
+  height: 40px;
+  background: #ecdfcc;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #1f1f1f;
+  font-size: 1.2rem;
+  position: absolute;
+  left: -30px;
+  top: 20px;
 }
 
 .workCardContent {
   flex: 1;
+  padding-left: 30px;
 }
 
 .workCardContent h2 {
   font-size: 1.5rem;
+  font-weight: bold;
   color: white;
   margin-bottom: 10px;
 }
@@ -83,69 +141,16 @@
   text-align: justify;
 }
 
-.highlight {
-  color: #ecdfcc;
-  font-weight: bold;
-}
+@media (max-width: 768px) {
+  .timeline::before {
+    display: none;
+  }
 
-@media (max-width: 1024px) {
+  .workIcon {
+    display: none;
+  }
+
   .workCard {
     flex-direction: column;
-    align-items: center;
-    text-align: center;
-    gap: 15px;
-  }
-
-  .workCardLogo img {
-    width: 60px;
-    margin-bottom: 10px;
-  }
-
-  .workCardContent h2 {
-    font-size: 1.4rem;
-  }
-
-  .description {
-    font-size: 0.95rem;
-    line-height: 1.5;
-  }
-}
-
-@media (max-width: 768px) {
-  .workTitle {
-    font-size: 2rem;
-    margin-bottom: 30px;
-  }
-
-  .workCard {
-    padding: 15px;
-  }
-
-  .workCardContent h2 {
-    font-size: 1.2rem;
-  }
-
-  .description {
-    font-size: 0.9rem;
-    line-height: 1.4;
-  }
-}
-
-@media (max-width: 480px) {
-  .workTitle {
-    font-size: 1.8rem;
-  }
-
-  .workCardContent h2 {
-    font-size: 1rem;
-    margin-bottom: 8px;
-  }
-
-  .description {
-    font-size: 0.85rem;
-  }
-
-  .workCard {
-    padding: 10px;
   }
 }
