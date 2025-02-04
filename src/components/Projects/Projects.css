@@ -74,7 +74,6 @@
   padding-bottom: 10px;
 }
 
-/* Liste des projets */
 .projectsContainer {
   display: flex;
   flex-direction: column;
@@ -83,7 +82,6 @@
   margin: auto;
 }
 
-/* Carte projet */
 .projectCard {
   display: flex;
   background-color: white;
@@ -98,7 +96,6 @@
   box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
 }
 
-/* Image du projet */
 .projectImage img {
   width: 350px;
   height: 100%;
@@ -106,7 +103,6 @@
   border-radius: 5px;
 }
 
-/* Contenu du projet */
 .projectContent {
   flex: 1;
   padding: 20px;
@@ -129,7 +125,6 @@
   margin-bottom: 15px;
 }
 
-/* Technologies */
 .projectTags {
   display: flex;
   flex-wrap: wrap;
@@ -146,7 +141,6 @@
   font-weight: bold;
 }
 
-/* Icônes */
 .projectIcons {
   display: flex;
   gap: 15px;
@@ -163,7 +157,6 @@
   color: #1a1d36;
 }
 
-/* Responsive */
 @media (max-width: 768px) {
   .projectCard {
     flex-direction: column;

@@ -1,4 +1,3 @@
-/* Barre latérale gauche */
 .sidebar {
   width: 120px;
   height: 100vh;
@@ -24,7 +23,6 @@
   margin: 10px 0;
 }
 
-/* test */
 .navLinks a {
   text-decoration: none;
   color: #ecdfcc;
@@ -36,7 +34,6 @@
   color: #ecdfcc;
 }
 
-/* Contenu principal */
 .mainContent {
   flex: 1;
   display: flex;
