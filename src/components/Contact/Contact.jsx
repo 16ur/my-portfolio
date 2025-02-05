@@ -6,9 +6,9 @@ function Contact() {
       <h1 className="contactTitle" id="contact">
         Contactez-moi
       </h1>
-      <p className="alternanceText">
+      {/* <p className="alternanceText">
         (Actuellement à la recherche d'une alternance pour l'année 2025)
-      </p>
+      </p> */}
       <div className="contactContainer">
         <div className="contactInfo">
           <h2>Mes coordonnées</h2>

@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import Keycrafted from "../../assets/keycrafted.png";
 import NearMTP from "../../assets/nearmtp.png";
 import Finder from "../../assets/finder.png";
 import "./Projects.css";
+import { GrProjects } from "react-icons/gr";
 
 function Projects() {
   const [showModal, setShowModal] = useState(false);
@@ -53,22 +54,20 @@ function Projects() {
   return (
     <div className="projectsPage">
       <h1 className="projectsTitle" id="projects">
-        PROJETS
+        <GrProjects className="iconTitle" />
+        Projets
       </h1>
       <div className="projectsContainer">
         {projects.map((project) => (
           <div className="projectCard" key={project.id}>
-            {/* Image du projet */}
             <div className="projectImage">
               <img src={project.image} alt={project.title} />
             </div>
 
-            {/* Contenu du projet */}
             <div className="projectContent">
               <h2 className="projectTitle">{project.title}</h2>
               <p className="projectDescription">{project.description}</p>
 
-              {/* Technologies utilisées */}
               <div className="projectTags">
                 {project.technologies.map((tech, index) => (
                   <span key={index} className="tag">
@@ -94,7 +93,6 @@ function Projects() {
           </div>
         ))}
       </div>
-
       {showModal && (
         <div className="modalBackdrop" onClick={closeModal}>
           <div className="modalContent" onClick={(e) => e.stopPropagation()}>

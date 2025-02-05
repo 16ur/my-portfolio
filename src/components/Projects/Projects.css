@@ -11,28 +11,6 @@
   z-index: 10;
 }
 
-.modalContent {
-  background: #2b2b2b;
-  color: white;
-  padding: 20px;
-  border-radius: 10px;
-  max-width: 400px;
-  width: 90%;
-  text-align: center;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
-}
-
-.modalContent h2 {
-  margin-bottom: 10px;
-  font-size: 1.5rem;
-  color: #ecdfcc;
-}
-
-.modalContent p {
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-
 .closeButton {
   border: 2px solid #ecdfcc;
   background-color: transparent;
@@ -50,57 +28,12 @@
   color: #1f1f1f;
 }
 
-.projectsPage {
-  background-color: #f5f7fa;
-  color: #1a1d36;
-  font-family: "Poppins", sans-serif;
-  text-align: center;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  width: 100vw;
-  padding: 50px 20px;
-  overflow: hidden;
-}
-
-.projectsTitle {
-  font-size: 2.5rem;
-  font-weight: bold;
-  margin-bottom: 40px;
-  color: #1a1d36;
-  text-transform: uppercase;
-  border-bottom: 3px solid #4a90e2;
-  display: inline-block;
-  padding-bottom: 10px;
-}
-
 .projectsContainer {
   display: flex;
   flex-direction: column;
   gap: 30px;
   max-width: 1000px;
   margin: auto;
-}
-
-.projectCard {
-  display: flex;
-  background-color: white;
-  border-radius: 5px;
-  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
-  overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.projectCard:hover {
-  transform: translateY(-5px);
-  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
-}
-
-.projectImage img {
-  width: 350px;
-  height: 100%;
-  padding: 20px;
-  border-radius: 5px;
 }
 
 .projectContent {
@@ -110,18 +43,19 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  background-color: #2b2b2b;
 }
 
 .projectTitle {
   font-size: 1.8rem;
   font-weight: bold;
-  color: #1a1d36;
+  color: #ddd;
 }
 
 .projectDescription {
   font-size: 1rem;
   line-height: 1.6;
-  color: #555;
+  color: #ddd;
   margin-bottom: 15px;
 }
 
@@ -133,8 +67,8 @@
 }
 
 .tag {
-  background-color: #e8f0ff;
-  color: #4a90e2;
+  background-color: #ecdfcc;
+  color: #1f1f1f;
   padding: 5px 12px;
   border-radius: 15px;
   font-size: 0.9rem;
@@ -149,12 +83,16 @@
 }
 
 .projectIcons a {
-  color: #4a90e2;
+  color: #ecdfcc;
   transition: color 0.3s ease;
 }
 
 .projectIcons a:hover {
-  color: #1a1d36;
+  color: #cbbeaa;
+}
+
+.iconTitle {
+  margin-right: 10px;
 }
 
 @media (max-width: 768px) {
@@ -179,4 +117,69 @@
   .projectIcons {
     justify-content: center;
   }
+}
+
+.modalContent {
+  background: #2b2b2b;
+  color: white;
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  width: 90%;
+  text-align: center;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+}
+
+.modalContent h2 {
+  margin-bottom: 10px;
+  font-size: 1.5rem;
+  color: #ecdfcc;
+}
+
+.modalContent p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.projectsPage {
+  background-color: #1f1f1f;
+  color: #1a1d36;
+  font-family: "Poppins", sans-serif;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  width: 100vw;
+  padding: 50px 20px;
+  overflow: hidden;
+}
+
+.projectsTitle {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 40px;
+  color: #ecdfcc;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+.projectCard {
+  display: flex;
+  background-color: white;
+  border-radius: 5px;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+}
+
+.projectImage img {
+  width: 350px;
+  height: 100%;
+  padding: 20px;
+  border-radius: 5px;
 }

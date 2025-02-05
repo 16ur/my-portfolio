@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./WorkCards.css";
 import { FaBriefcase, FaCode, FaFilter } from "react-icons/fa";
+import { MdOutlineWorkOutline } from "react-icons/md";
 
 function WorkCards() {
   const [filter, setFilter] = useState("all");
@@ -38,7 +39,7 @@ function WorkCards() {
     },
     {
       id: 4,
-      title: "Employé polyvalant",
+      title: "Employé polyvalent",
       date: "📅 Été 2023",
       company: "🏢 McDonald's",
       location: "📍 Marseille, France",
@@ -55,7 +56,10 @@ function WorkCards() {
 
   return (
     <div className="workCards" id="work">
-      <h1 className="workTitle">📌 Parcours</h1>
+      <h1 className="workTitle">
+        <MdOutlineWorkOutline className="iconTitle" />
+        Expériences
+      </h1>
 
       <div className="filterButtons">
         <button
