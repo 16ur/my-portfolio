@@ -151,3 +151,36 @@
     font-size: 0.85rem;
   }
 }
+
+.scrollDownArrow {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 2rem;
+  color: #ecdfcc;
+  animation: bounce 1.5s infinite;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateX(-50%) translateY(0);
+  }
+  50% {
+    transform: translateX(-50%) translateY(10px);
+  }
+}
+
+@media (max-width: 768px) {
+  .scrollDownArrow {
+    font-size: 1.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollDownArrow {
+    font-size: 1.5rem;
+  }
+}

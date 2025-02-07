@@ -1,5 +1,8 @@
 import "./CoreContent.css";
+import { FaArrowDown } from "react-icons/fa";
 import CV from "../../assets/CV_AXEL_MANGUIAN.pdf";
+import { FiGithub } from "react-icons/fi";
+import { FiLinkedin } from "react-icons/fi";
 
 function CoreContent() {
   return (
@@ -12,8 +15,8 @@ function CoreContent() {
           Développeur Web Full-Stack basé en France 🇫🇷
         </h2>
         <p className="descriptionCore">
-          J'adore créer des interfaces modernes et des sites web interactifs,
-          en me concentrant sur des expériences utilisateur optimales.
+          J'adore créer des interfaces modernes et des sites web interactifs, en
+          me concentrant sur des expériences utilisateur optimales.
         </p>
         <div className="buttonsContainer">
           <a href="#aboutme">
@@ -23,6 +26,9 @@ function CoreContent() {
             <button className="secondaryButton">Télécharger mon CV</button>
           </a>
         </div>
+        <a href="#aboutme" className="scrollDownArrow">
+          <FaArrowDown />
+        </a>
       </div>
     </div>
   );
