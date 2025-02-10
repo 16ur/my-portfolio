@@ -24,7 +24,7 @@ function WorkCards() {
       company: "🏢 Boulanger",
       location: "📍 Marseille, France",
       description:
-        "J'ai travaillé en tant que vendeur multimédia chez Boulanger durant l'été 2024. J'ai pu développer mes compétences en communication et en vente.",
+        "J'ai travaillé en tant que vendeur multimédia chez Boulanger durant l'été 2024. J'ai alors développé mes compétences en communication et en vente.",
       category: "autre",
     },
     {
@@ -34,7 +34,7 @@ function WorkCards() {
       company: "🏢 bluedrop.fr",
       location: "📍 Marseille, France",
       description:
-        "J'ai réalisé un stage de 3 mois au sein de la société bluedrop.fr en tant que développeur web. J'ai pu mettre en pratique mes compétences en développement web et apprendre de nouvelles technologies comme Drupal.",
+        "J'ai effectué un stage de trois mois au sein de la société Bluedrop.fr en tant que développeur web. Cela m'a permis de mettre en pratique mes compétences en développement web et d'apprendre de nouvelles technologies, comme Drupal.",
       category: "informatique",
     },
     {

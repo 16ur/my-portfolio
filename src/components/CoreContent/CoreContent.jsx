@@ -1,8 +1,6 @@
 import "./CoreContent.css";
 import { FaArrowDown } from "react-icons/fa";
 import CV from "../../assets/CV_AXEL_MANGUIAN.pdf";
-import { FiGithub } from "react-icons/fi";
-import { FiLinkedin } from "react-icons/fi";
 
 function CoreContent() {
   return (
