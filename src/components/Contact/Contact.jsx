@@ -1,4 +1,5 @@
 import "./Contact.css";
+import { FiGithub, FiLinkedin } from "react-icons/fi";
 
 function Contact() {
   return (
@@ -19,14 +20,14 @@ function Contact() {
           <p>Réseaux sociaux :</p>
           <div className="socialIcons">
             <a href="https://github.com/16ur" target="_blank" rel="noreferrer">
-              GitHub
+              <FiGithub className="icon githubIcon" />
             </a>
             <a
               href="https://www.linkedin.com/in/axel-manguian/"
               target="_blank"
               rel="noreferrer"
             >
-              LinkedIn
+              <FiLinkedin className="icon linkedinIcon" />
             </a>
           </div>
         </div>
