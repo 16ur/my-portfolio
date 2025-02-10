@@ -24,6 +24,10 @@
   display: flex;
   gap: 15px;
   margin-bottom: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  max-width: 800px;
 }
 
 .filterButton {
@@ -39,12 +43,41 @@
   display: flex;
   align-items: center;
   gap: 8px;
+  flex: 1;
+  min-width: 120px;
+  text-align: center;
+  justify-content: center;
 }
 
 .filterButton:hover,
 .filterButton.active {
   background: #ecdfcc;
   color: #1f1f1f;
+}
+
+@media (max-width: 768px) {
+  .filterButtons {
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .filterButton {
+    font-size: 0.9rem;
+    padding: 8px 12px;
+    min-width: 100px;
+  }
+}
+
+@media (max-width: 480px) {
+  .filterButtons {
+    gap: 8px;
+  }
+
+  .filterButton {
+    font-size: 0.85rem;
+    padding: 6px 10px;
+    min-width: 80px;
+  }
 }
 
 .timeline {
