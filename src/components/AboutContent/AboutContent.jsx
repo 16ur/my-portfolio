@@ -1,5 +1,5 @@
 import "./AboutContent.css";
-import aboutMe from "../../assets/aboutMePic.jpg";
+import aboutMe from "../../assets/aboutMePic.webp";
 import { FaLaptopCode } from "react-icons/fa";
 
 function AboutContent() {

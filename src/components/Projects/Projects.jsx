@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { FaGithub } from "react-icons/fa";
-import Keycrafted from "../../assets/keycrafted.png";
-import NearMTP from "../../assets/nearmtp.png";
-import Finder from "../../assets/finder.png";
+import Keycrafted from "../../assets/keycrafted.webp";
+import NearMTP from "../../assets/nearmtp.webp";
+import Finder from "../../assets/finder.webp";
 import "./Projects.css";
 import { GrProjects } from "react-icons/gr";
 
