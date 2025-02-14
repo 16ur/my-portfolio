@@ -1,0 +1,74 @@
+.techStack {
+  background-color: #1f1f1f;
+  color: white;
+  font-family: "Poppins", sans-serif;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.techStackTitle {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  color: #ecdfcc;
+}
+
+.techCategory {
+  margin-bottom: 20px;
+}
+
+.techCategory h3 {
+  font-size: 1.4rem;
+  color: #ecdfcc;
+  margin-bottom: 10px;
+}
+
+.techIcons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.techItem {
+  background: #2b2b2b;
+  padding: 12px 15px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #ecdfcc;
+  transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.techItem .icon {
+  font-size: 1.5rem;
+}
+
+.techItem:hover {
+  transform: scale(1.1);
+  background: #cbbeaa;
+  color: #1f1f1f;
+}
+
+@media (max-width: 768px) {
+  .techStack {
+    padding: 30px 15px;
+  }
+
+  .techIcons {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .techItem {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+  }
+
+  .techItem .icon {
+    font-size: 1.2rem;
+  }
+}

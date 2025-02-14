@@ -7,6 +7,7 @@ import AboutContent from "./components/AboutContent/AboutContent";
 import WorkCards from "./components/WorkCards/WorkCards";
 import Projects from "./components/Projects/Projects";
 import Contact from "./components/Contact/Contact";
+import TechStack from "./components/TechStack/TechStack";
 function App() {
   return (
     <>
@@ -14,6 +15,7 @@ function App() {
       {/* <Navbar /> */}
       <CoreContent />
       <AboutContent />
+      <TechStack />
       <WorkCards />
       <Projects />
       <Contact />
