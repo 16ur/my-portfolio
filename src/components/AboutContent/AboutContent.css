@@ -29,6 +29,34 @@
   color: #ecdfcc;
 }
 
+.aboutTabs {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.tabButton {
+  background: transparent;
+  border: 2px solid #ecdfcc;
+  color: #ecdfcc;
+  padding: 12px 18px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.tabButton:hover,
+.tabButton.active {
+  background: #ecdfcc;
+  color: #1f1f1f;
+}
+
 .aboutContentContainer {
   display: flex;
   align-items: center;
@@ -40,7 +68,6 @@
   padding: 30px;
   border-radius: 15px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
-
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -59,6 +86,23 @@
   text-align: justify;
   word-wrap: break-word;
   overflow-wrap: break-word;
+}
+
+.softSkillsList,
+.passionsList {
+  list-style: none;
+  padding: 0;
+}
+
+.softSkillsList li,
+.passionsList li {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .progColor {
@@ -89,35 +133,8 @@
     font-size: 2.2rem;
   }
 
-  .iconTitle {
-    font-size: 1.8rem;
-  }
-
   .aboutContentText {
     font-size: 0.9rem;
     padding: 0 10px;
-  }
-
-  .aboutContentImage img {
-    max-width: 320px;
-  }
-}
-
-@media (max-width: 480px) {
-  .aboutTitle {
-    font-size: 1.8rem;
-  }
-
-  .iconTitle {
-    font-size: 1.5rem;
-  }
-
-  .aboutContentText {
-    font-size: 0.85rem;
-    padding: 0 15px;
-  }
-
-  .aboutContentImage img {
-    max-width: 280px;
   }
 }
