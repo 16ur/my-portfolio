@@ -14,6 +14,9 @@ function Contact() {
             Email :{" "}
             <a href="mailto:axelmanguian@gmail.com">axelmanguian@gmail.com</a>
           </p>
+          <p>
+            Téléphone : <a href="tel:+33783515141">+33 7 83 51 51 41</a>
+          </p>
           <p>Réseaux sociaux :</p>
           <div className="socialIcons">
             <a href="https://github.com/16ur" target="_blank" rel="noreferrer">
