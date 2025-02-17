@@ -87,7 +87,7 @@ function AboutContent() {
               <ul className="passionsList">
                 <li>💻 Développement Web</li>
                 <li>🩻 L'ergonomie</li>
-                <li>🖦 La création de claviers customisés</li>
+                <li>⌨️ La création de claviers customisés</li>
               </ul>
             </>
           )}

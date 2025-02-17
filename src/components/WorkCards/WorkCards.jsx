@@ -8,6 +8,16 @@ function WorkCards() {
 
   const experiences = [
     {
+      id: 0,
+      title: "Développeur Web Back-end",
+      date: "📅 Février 2025 - Aujourd'hui",
+      company: "🏢 Albalogic",
+      location: "📍 Aubagne, France",
+      description:
+        "Je travaille actuellement chez Albalogic en tant que développeur web back-end, où je suis en charge de la maintenance de l’une de leurs applications.",
+      category: "informatique",
+    },
+    {
       id: 1,
       title: "Alternance Développeur Web Back-end",
       date: "📅 Septembre 2024 - Décembre 2024",
@@ -17,6 +27,7 @@ function WorkCards() {
         "J'ai réalisé une alternance de 4 mois chez Winlink Systems en tant que développeur web, où je m'occupais de la maintenance corrective et évolutive de la plateforme ainsi que de la participation au support logiciel.",
       category: "informatique",
     },
+
     {
       id: 2,
       title: "Vendeur multimédia",

@@ -138,3 +138,23 @@
     padding: 0 10px;
   }
 }
+
+@media (max-width: 480px) {
+  .aboutTitle {
+    font-size: 1.8rem;
+  }
+
+  .tabButton {
+    padding: 10px 15px;
+    font-size: 0.9rem;
+  }
+
+  .aboutContentText {
+    font-size: 0.85rem;
+  }
+
+  .aboutContentImage img {
+    width: 100%;
+    max-width: 300px;
+  }
+}
