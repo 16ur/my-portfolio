@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <Analytics />
-      {/* <Navbar /> */}
+      <Navbar />
       <CoreContent />
       <AboutContent />
       <TechStack />

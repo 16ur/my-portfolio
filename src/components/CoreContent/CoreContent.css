@@ -4,7 +4,6 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  text-align: center;
   background-color: #1f1f1f;
   color: white;
   padding: 0 20px;
@@ -18,7 +17,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
 }
 
 .coreContentTitle {
@@ -38,12 +36,10 @@
   font-size: 1.1rem;
   line-height: 1.6;
   margin-bottom: 30px;
-  text-align: center;
 }
 
 .buttonsContainer {
   display: flex;
-  justify-content: center;
   gap: 15px;
 }
 
@@ -65,12 +61,13 @@
 }
 
 .primaryButton:hover {
-  background-color: #cbbeaa;
+  background-color: #bca788;
+  border-color: #bca788;
   color: #1f1f1f;
 }
 
 .secondaryButton {
-  background-color: #cbbeaa;
+  background-color: #ecdfcc;
   color: #1f1f1f;
 }
 
@@ -83,13 +80,68 @@
   color: #ecdfcc;
 }
 
-@media (max-width: 1024px) {
+.contentWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.avatarContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.avatarImage {
+  width: 300px;
+  height: 300px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #ecdfcc;
+  animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.textContainer {
+  flex: 2;
+  text-align: left;
+}
+
+@media (max-width: 768px) {
+  .contentWrapper {
+    flex-direction: column-reverse;
+    gap: 30px;
+  }
+
+  .textContainer {
+    text-align: center;
+    min-height: 40vh;
+  }
+}
+
+@media (max-width: 1180px) {
   .coreContent {
     padding: 0;
   }
 
   .coreContentTitle {
     font-size: 2.5rem;
+    overflow-y: hidden;
   }
 
   .coreContentSubtitle {
@@ -98,6 +150,12 @@
 
   .descriptionCore {
     font-size: 1rem;
+  }
+
+  .avatarImage {
+    width: 250px;
+    height: 250px;
+    animation: none;
   }
 }
 
@@ -130,7 +188,6 @@
   .primaryButton,
   .secondaryButton {
     width: 100%;
-    text-align: center;
   }
 }
 
@@ -182,5 +239,15 @@
 @media (max-width: 480px) {
   .scrollDownArrow {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 1080px) {
+  .textContainer {
+    padding: 0 20px;
+  }
+
+  .avatarContainer {
+    padding: 0 20px;
   }
 }
