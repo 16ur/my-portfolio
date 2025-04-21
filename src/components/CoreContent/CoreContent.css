@@ -132,6 +132,10 @@
     text-align: center;
     min-height: 40vh;
   }
+
+  .scrollDownArrow {
+    display: none;
+  }
 }
 
 @media (max-width: 1180px) {
