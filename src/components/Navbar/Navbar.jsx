@@ -1,25 +1,75 @@
 import "./Navbar.css";
+import { useState, useEffect } from "react";
 
 function Navbar() {
+  const [isOpen, setIsOpen] = useState(false);
+  const [menuClass, setMenuClass] = useState("");
+
+  const toggleMenu = () => {
+    if (isOpen) {
+      // Fermeture du menu
+      setMenuClass("close");
+      // Après l'animation de fermeture, masquer complètement le menu
+      setTimeout(() => {
+        setIsOpen(false);
+        setMenuClass("");
+      }, 300); // Même durée que l'animation CSS
+    } else {
+      // Ouverture du menu
+      setIsOpen(true);
+      setMenuClass("open");
+    }
+  };
+
   return (
-    <nav className="sidebar">
-      <ul className="navLinks">
+    <nav className="navbar">
+      <a href="#home" className="logo">
+        <span className="logo-full">Axel Manguian</span>
+        <span className="logo-short">AM</span>
+      </a>
+
+      <ul className={`navLinks ${menuClass}`}>
         <li>
-          <a href="#home">accueil</a>
+          <a href="#home" onClick={toggleMenu}>
+            Accueil
+          </a>
         </li>
         <li>
-          <a href="#aboutme">about me</a>
+          <a href="#aboutme" onClick={toggleMenu}>
+            À propos
+          </a>
         </li>
         <li>
-          <a href="#work">parcours</a>
+          <a href="#work" onClick={toggleMenu}>
+            Parcours
+          </a>
         </li>
         <li>
-          <a href="#projects">projets</a>
+          <a href="#projects" onClick={toggleMenu}>
+            Projets
+          </a>
         </li>
         <li>
-          <a href="#contact">contact</a>
+          <a href="#contact" onClick={toggleMenu}>
+            Contact
+          </a>
         </li>
       </ul>
+
+      <a
+        href="https://www.linkedin.com/in/axel-manguian/"
+        className="contactButton"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        LinkedIn
+      </a>
+
+      <div className={`burger ${isOpen ? "open" : ""}`} onClick={toggleMenu}>
+        <div className="line"></div>
+        <div className="line"></div>
+        <div className="line"></div>
+      </div>
     </nav>
   );
 }

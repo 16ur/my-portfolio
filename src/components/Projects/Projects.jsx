@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { FaGithub } from "react-icons/fa";
 import Keycrafted from "../../assets/keycrafted.webp";
 import NearMTP from "../../assets/nearmtp.webp";
 import Finder from "../../assets/finder.webp";
