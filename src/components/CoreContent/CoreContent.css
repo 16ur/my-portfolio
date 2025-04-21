@@ -105,6 +105,14 @@
   animation: floating 3s ease-in-out infinite;
 }
 
+.buttonsAndArrowContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  margin-top: 30px;
+}
+
 @keyframes floating {
   0% {
     transform: translateY(0px);

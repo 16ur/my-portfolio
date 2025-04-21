@@ -21,12 +21,17 @@ function CoreContent() {
             J'adore créer des interfaces modernes et des sites web interactifs,
             en me concentrant sur des expériences utilisateur optimales.
           </p>
-          <div className="buttonsContainer">
-            <a href="#aboutme">
-              <button className="primaryButton">À propos de moi 🚀</button>
-            </a>
-            <a href={CV} download>
-              <button className="secondaryButton">Télécharger mon CV</button>
+          <div className="buttonsAndArrowContainer">
+            <div className="buttonsContainer">
+              <a href="#aboutme">
+                <button className="primaryButton">À propos de moi 🚀</button>
+              </a>
+              <a href={CV} download>
+                <button className="secondaryButton">Télécharger mon CV</button>
+              </a>
+            </div>
+            <a href="#aboutme" className="scrollDownArrow">
+              <FaArrowDown />
             </a>
           </div>
         </div>
@@ -34,9 +39,6 @@ function CoreContent() {
           <Avatar className="avatarImage" />
         </div>
       </div>
-      <a href="#aboutme" className="scrollDownArrow">
-        <FaArrowDown />
-      </a>
     </div>
   );
 }
