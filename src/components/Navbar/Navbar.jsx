@@ -7,15 +7,12 @@ function Navbar() {
 
   const toggleMenu = () => {
     if (isOpen) {
-      // Fermeture du menu
       setMenuClass("close");
-      // Après l'animation de fermeture, masquer complètement le menu
       setTimeout(() => {
         setIsOpen(false);
         setMenuClass("");
-      }, 300); // Même durée que l'animation CSS
+      }, 300);
     } else {
-      // Ouverture du menu
       setIsOpen(true);
       setMenuClass("open");
     }

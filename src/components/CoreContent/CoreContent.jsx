@@ -23,7 +23,7 @@ function CoreContent() {
           </p>
           <div className="buttonsContainer">
             <a href="#aboutme">
-              <button className="primaryButton">À propos de moi 🚀</button>
+              <button className="primaryButton">À propos de moi</button>
             </a>
             <a href={CV} download>
               <button className="secondaryButton">Télécharger mon CV</button>

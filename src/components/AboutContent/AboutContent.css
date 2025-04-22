@@ -1,5 +1,5 @@
 .about-section {
-  background-color: #111111;
+  background-color: #161616;
   color: #ffffff;
   font-family: "Inter", sans-serif;
   padding: 100px 0;
@@ -85,7 +85,7 @@
 
 .tech-bar-container {
   height: 8px;
-  background-color: #2a2a2a;
+  background-color: #161616;
   border-radius: 4px;
   overflow: hidden;
 }

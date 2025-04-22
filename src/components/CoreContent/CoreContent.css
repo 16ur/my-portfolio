@@ -4,7 +4,7 @@
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgb(22, 21, 21);
+  background-color: #161616;
   color: white;
   padding: 0 20px;
   overflow: hidden;
@@ -56,28 +56,28 @@
 
 .primaryButton {
   background-color: transparent;
-  border: 1px solid #ecdfcc;
-  color: #ecdfcc;
+  border: 1px solid #bca788;
+  color: #bca788;
 }
 
 .primaryButton:hover {
-  background-color: #bca788;
-  border-color: #bca788;
+  background-color: #8b6448;
+  border-color: #8b6448;
   color: #1f1f1f;
 }
 
 .secondaryButton {
-  background-color: #ecdfcc;
-  color: #1f1f1f;
-}
-
-.secondaryButton:hover {
   background-color: #bca788;
   color: #1f1f1f;
 }
 
+.secondaryButton:hover {
+  background-color: #8b6448;
+  color: #1f1f1f;
+}
+
 .colorText {
-  color: #ecdfcc;
+  color: #bca788;
 }
 
 .contentWrapper {
