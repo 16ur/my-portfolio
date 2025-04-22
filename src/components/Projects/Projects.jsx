@@ -1,9 +1,9 @@
 import React, { useState } from "react";
+import "./Projects.css";
 import Keycrafted from "../../assets/keycrafted.webp";
 import NearMTP from "../../assets/nearmtp.webp";
 import Finder from "../../assets/finder.webp";
-import "./Projects.css";
-import { GrProjects } from "react-icons/gr";
+import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 function Projects() {
   const [showModal, setShowModal] = useState(false);
@@ -13,28 +13,42 @@ function Projects() {
       id: 2,
       title: "KeyCrafted",
       description:
-        "Réalisé dans le cadre de ma formation, KeyCrafted est un site web de vente de claviers et d'accessoires.",
+        "Site e-commerce de claviers mécaniques personnalisés avec fonctionnalités avancées et paiement sécurisé.",
       link: "https://github.com/16ur/keycrafted",
-      technologies: ["React.js", "CSS", "ExpressJS", "MongoDB"],
+      technologies: ["React.js", "Express.js", "MongoDB", "Stripe API"],
       image: Keycrafted,
+      features: [
+        "Paiement sécurisé avec Stripe",
+        "Backend performant avec Express.js",
+      ],
     },
     {
       id: 3,
       title: "Finder",
       description:
-        "Finder est un site web réalisé en groupe, permettant de mettre en relation des particuliers et des professionnels.",
+        "Plateforme de mise en relation entre particuliers et professionnels pour des services à domicile.",
       link: null,
-      technologies: ["PHP Laravel", "CSS", "MySQL"],
+      technologies: ["Laravel", "MySQL", "WebSockets", "Docker"],
       image: Finder,
+      features: [
+        "Messagerie en temps réel",
+        "Système de notation et avis",
+        "Sécurité des données avec Laravel",
+      ],
     },
     {
       id: 4,
       title: "nearMTP",
       description:
-        "nearMTP permet aux utilisateurs de rechercher des activités autour de Montpellier et de les filtrer.",
+        "Application de découverte d'activités locales à Montpellier avec filtres avancés de recherche.",
       link: "https://github.com/16ur/nearMTP",
-      technologies: ["React.js", "CSS", "ExpressJS", "MongoDB"],
+      technologies: ["React.js", "Express.js", "MongoDB"],
       image: NearMTP,
+      features: [
+        "Filtres personnalisables",
+        "Interface utilisateur intuitive",
+        "Création d'API RESTful avec Express.js",
+      ],
     },
   ];
 
@@ -51,71 +65,99 @@ function Projects() {
   };
 
   return (
-    <div className="projectsPage">
-      <h1 className="projectsTitle" id="projects">
-        <GrProjects className="iconTitle" />
-        Projets
-      </h1>
-      <div className="projectsContainer">
-        {projects.map((project) => (
-          <div className="projectCard" key={project.id}>
-            <div className="projectImage">
-              <picture>
-                <source srcSet={project.image} type="image/webp" />
-                <img src={project.image} alt={project.title} loading="lazy" />
-              </picture>
-            </div>
+    <section className="projects-section" id="projects">
+      <div className="projects-container">
+        <h2 className="projects-title">
+          <FaCode className="icon" /> Mes Projets
+        </h2>
+        <p className="projects-subtitle">
+          Une sélection de mes réalisations les plus significatives
+        </p>
 
-            <div className="projectContent">
-              <h2 className="projectTitle">{project.title}</h2>
-              <p className="projectDescription">{project.description}</p>
-
-              <div className="projectTags">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tag">
-                    {tech}
-                  </span>
-                ))}
+        <div className="projects-grid">
+          {projects.map((project) => (
+            <div className="project-card" key={project.id}>
+              <div className="project-image-container">
+                <img
+                  src={project.image}
+                  alt={project.title}
+                  className="project-image"
+                  loading="lazy"
+                />
+                <div className="project-overlay">
+                  <h3>{project.title}</h3>
+                  <div className="project-links">
+                    {project.link ? (
+                      <>
+                        <button
+                          onClick={() => handleLinkClick(project.link)}
+                          className="project-link"
+                        >
+                          <FaGithub /> Code
+                        </button>
+                        {project.demo && (
+                          <button className="project-link">
+                            <FaExternalLinkAlt /> Demo
+                          </button>
+                        )}
+                      </>
+                    ) : (
+                      <button
+                        onClick={() => setShowModal(true)}
+                        className="project-link"
+                      >
+                        <FaCode /> Détails
+                      </button>
+                    )}
+                  </div>
+                </div>
               </div>
 
-              <div className="projectIcons">
-                <button
-                  className="Btn"
-                  onClick={() => handleLinkClick(project.link)}
-                >
-                  <svg
-                    stroke-linejoin="round"
-                    stroke-linecap="round"
-                    stroke-width="2"
-                    stroke="currentColor"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    class="icon-svg"
-                  >
-                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
-                  </svg>
-                  <span class="tooltip">Voir le projet</span>
-                </button>
+              <div className="project-content">
+                <h3 className="project-name">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+
+                <div className="project-features">
+                  <h4>Fonctionnalités clés :</h4>
+                  <ul>
+                    {project.features.map((feature, index) => (
+                      <li key={index}>{feature}</li>
+                    ))}
+                  </ul>
+                </div>
+
+                <div className="project-technologies">
+                  {project.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
+
       {showModal && (
-        <div className="modalBackdrop" onClick={closeModal}>
-          <div className="modalContent" onClick={(e) => e.stopPropagation()}>
-            <h2>Projet non disponible</h2>
+        <div className="modal-backdrop" onClick={closeModal}>
+          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
+            <h3>Projet académique confidentiel</h3>
             <p>
-              Ce projet est académique et ne peut pas être divulgué pour le
-              moment. Merci de votre compréhension.
+              Ce projet a été réalisé dans le cadre de ma formation et ne peut
+              être partagé publiquement pour des raisons de confidentialité.
             </p>
-            <button className="closeButton" onClick={closeModal}>
-              Fermer
+            <p>
+              Je serais ravi d'en discuter en entretien et de vous présenter des
+              extraits de code si nécessaire.
+            </p>
+            <button className="modal-close-btn" onClick={closeModal}>
+              Compris
             </button>
           </div>
         </div>
       )}
-    </div>
+    </section>
   );
 }
 
