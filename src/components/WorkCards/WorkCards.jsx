@@ -1,7 +1,12 @@
 import React, { useState } from "react";
 import "./WorkCards.css";
-import { FaBriefcase, FaCode, FaFilter } from "react-icons/fa";
-import { MdOutlineWorkOutline } from "react-icons/md";
+import {
+  FaCode,
+  FaBriefcase,
+  FaCalendarAlt,
+  FaMapMarkerAlt,
+  FaBuilding,
+} from "react-icons/fa";
 
 function WorkCards() {
   const [filter, setFilter] = useState("all");
@@ -10,53 +15,76 @@ function WorkCards() {
     {
       id: 0,
       title: "Développeur Web Back-end",
-      date: "📅 Février 2025 - Aujourd'hui",
-      company: "🏢 Albalogic",
-      location: "📍 Aubagne, France",
+      date: "Février 2025 - Aujourd'hui",
+      company: "Albalogic",
+      location: "Aubagne, France",
       description:
-        "Je travaille actuellement chez Albalogic en tant que développeur web back-end, où je suis en charge de la maintenance de l’une de leurs applications.",
+        "Actuellement chez Albalogic en tant que stagiaire développeur web back-end, je suis en charge de la maintenance évolutive et corrective de l'application AutoPrecision.",
       category: "informatique",
+      technologies: ["PHP", "Symfony", "JavaScript", "ReactJS", "MySQL", "Git"],
     },
     {
       id: 1,
       title: "Alternance Développeur Web Back-end",
-      date: "📅 Septembre 2024 - Décembre 2024",
-      company: "🏢 Winlink Systems",
-      location: "📍 Marseille, France",
+      date: "Septembre 2024 - Décembre 2024",
+      company: "Winlink Systems",
+      location: "Marseille, France",
       description:
-        "J'ai réalisé une alternance de 4 mois chez Winlink Systems en tant que développeur web, où je m'occupais de la maintenance corrective et évolutive de la plateforme ainsi que de la participation au support logiciel.",
+        "Lors de mon alternance chez Winlink Systems en tant que développeur web, j'ai assuré la maintenance corrective et évolutive d'une plateforme utilisée par les secrétaires hospitalières pour la gestion des patients, tout en contribuant activement au support logiciel.",
       category: "informatique",
+      technologies: [
+        "PHP",
+        "Laravel",
+        "JavaScript",
+        "ReactJS",
+        "MySQL",
+        "Git",
+        "Agile",
+      ],
     },
-
     {
       id: 2,
-      title: "Vendeur multimédia",
-      date: "📅 Été 2024",
-      company: "🏢 Boulanger",
-      location: "📍 Marseille, France",
+      title: "Conseiller vendeur multimédia",
+      date: "Juillet 2024 - Août 2024",
+      company: "Boulanger",
+      location: "Marseille, France",
       description:
-        "J'ai travaillé en tant que vendeur multimédia chez Boulanger durant l'été 2024. J'ai alors développé mes compétences en communication et en vente.",
+        "Vendeur multimédia chez Boulanger durant l'été 2024, j'ai renforcé mes compétences en communication, en conseil client et en techniques de vente, en accompagnant les clients dans leurs choix de produits technologiques.",
       category: "autre",
+      skills: ["Relation client", "Vente", "Travail d'équipe"],
     },
     {
       id: 3,
       title: "Stage Développeur Web",
-      date: "📅 Avril 2024 - Juin 2024",
-      company: "🏢 bluedrop.fr",
-      location: "📍 Marseille, France",
+      date: "Avril 2024 - Juin 2024",
+      company: "bluedrop.fr",
+      location: "Marseille, France",
       description:
         "J'ai effectué un stage de trois mois au sein de la société Bluedrop.fr en tant que développeur web. Cela m'a permis de mettre en pratique mes compétences en développement web et d'apprendre de nouvelles technologies, comme Drupal.",
       category: "informatique",
+      technologies: ["Drupal", "PHP", "JavaScript", "HTML/CSS"],
     },
     {
       id: 4,
       title: "Employé polyvalent",
-      date: "📅 Été 2023",
-      company: "🏢 McDonald's",
-      location: "📍 Marseille, France",
+      date: "Juillet 2023 - Août 2023",
+      company: "McDonald's",
+      location: "Marseille, France",
       description:
-        "J'ai travaillé en tant qu'employé polyvalent chez McDonald's durant l'été 2023. J'ai pu développer mes compétences en communication et en travail d'équipe.",
+        "Employé polyvalent chez McDonald's durant l'été 2023, j'ai développé mes compétences en communication, en gestion du stress et en travail d'équipe dans un environnement dynamique et exigeant.",
       category: "autre",
+      skills: ["Polyvalence", "Gestion du stress", "Organisation"],
+    },
+    {
+      id: 6,
+      title: "Ouvrier agricole",
+      date: "Juillet 2022 - Août 2022",
+      company: "Exploitation agricole",
+      location: "Marseille",
+      description:
+        "Ouvrier agricole durant l'été 2022, j'ai participé à la récolte de salades, développant ainsi mon endurance, ma rigueur et ma capacité à travailler en équipe dans des conditions physiques exigeantes.",
+      category: "autre",
+      skills: ["Endurance", "Rigueur", "Travail en équipe"],
     },
   ];
 
@@ -66,54 +94,81 @@ function WorkCards() {
       : experiences.filter((exp) => exp.category === filter);
 
   return (
-    <div className="workCards" id="work">
-      <h1 className="workTitle">
-        <MdOutlineWorkOutline className="iconTitle" />
-        Expériences
-      </h1>
+    <section className="work-section" id="work">
+      <div className="work-container">
+        <h2 className="work-title">Mes Expériences Professionnelles</h2>
 
-      <div className="filterButtons">
-        <button
-          className={`filterButton ${filter === "all" ? "active" : ""}`}
-          onClick={() => setFilter("all")}
-        >
-          <FaFilter /> Tous
-        </button>
-        <button
-          className={`filterButton ${
-            filter === "informatique" ? "active" : ""
-          }`}
-          onClick={() => setFilter("informatique")}
-        >
-          <FaCode /> Informatique
-        </button>
-        <button
-          className={`filterButton ${filter === "autre" ? "active" : ""}`}
-          onClick={() => setFilter("autre")}
-        >
-          <FaBriefcase /> Autres Expériences
-        </button>
-      </div>
+        <div className="filter-buttons">
+          <button
+            className={`filter-btn ${filter === "all" ? "active" : ""}`}
+            onClick={() => setFilter("all")}
+          >
+            Toutes
+          </button>
+          <button
+            className={`filter-btn ${
+              filter === "informatique" ? "active" : ""
+            }`}
+            onClick={() => setFilter("informatique")}
+          >
+            Développement
+          </button>
+          <button
+            className={`filter-btn ${filter === "autre" ? "active" : ""}`}
+            onClick={() => setFilter("autre")}
+          >
+            Autres
+          </button>
+        </div>
 
-      <div className="workCardsContainer">
-        <div className="timeline">
-          {filteredExperiences.map((experience) => (
-            <div className="workCard" key={experience.id}>
-              <div className="workIcon">
-                <FaBriefcase />
+        <div className="experiences-grid">
+          {filteredExperiences.map((exp) => (
+            <div className="experience-card" key={exp.id}>
+              <div className="card-header">
+                <h3>{exp.title}</h3>
+                <div className="company-badge">
+                  <FaBuilding className="icon" />
+                  <span>{exp.company}</span>
+                </div>
               </div>
-              <div className="workCardContent">
-                <h2>{experience.title}</h2>
-                <p className="date">{experience.date}</p>
-                <p className="company">{experience.company}</p>
-                <p className="location">{experience.location}</p>
-                <p className="description">{experience.description}</p>
+
+              <div className="card-details">
+                <div className="detail-item">
+                  <FaCalendarAlt className="icon" />
+                  <span>{exp.date}</span>
+                </div>
+                <div className="detail-item">
+                  <FaMapMarkerAlt className="icon" />
+                  <span>{exp.location}</span>
+                </div>
               </div>
+
+              <p className="card-description">{exp.description}</p>
+
+              {exp.technologies && (
+                <div className="tech-tags">
+                  {exp.technologies.map((tech, index) => (
+                    <span key={index} className="tech-tag">
+                      {tech}
+                    </span>
+                  ))}
+                </div>
+              )}
+
+              {exp.skills && (
+                <div className="skill-tags">
+                  {exp.skills.map((skill, index) => (
+                    <span key={index} className="skill-tag">
+                      {skill}
+                    </span>
+                  ))}
+                </div>
+              )}
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
