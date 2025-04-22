@@ -16,4 +16,9 @@ export default defineConfig({
       include: "**/*.svg",
     }),
   ],
+  server: {
+    watch: {
+      usePolling: true,
+    },
+  },
 });
