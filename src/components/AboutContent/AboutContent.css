@@ -17,7 +17,17 @@
   font-weight: 700;
   margin-bottom: 3rem;
   position: relative;
-  overflow: hidden;
+}
+
+.about-title::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 60px;
+  height: 4px;
+  background: #bca788;
+  border-radius: 2px;
 }
 
 .about-title::after {
@@ -261,5 +271,11 @@
 @media (max-width: 768px) {
   .tools-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 1180px) {
+  .about-title {
+    overflow-y: hidden;
   }
 }

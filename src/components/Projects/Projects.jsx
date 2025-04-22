@@ -67,9 +67,7 @@ function Projects() {
   return (
     <section className="projects-section" id="projects">
       <div className="projects-container">
-        <h2 className="projects-title">
-          <FaCode className="icon" /> Mes Projets
-        </h2>
+        <h2 className="projects-title">Mes Projets</h2>
         <p className="projects-subtitle">
           Une sélection de mes réalisations les plus significatives
         </p>
