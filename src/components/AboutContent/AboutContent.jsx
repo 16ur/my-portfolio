@@ -1,99 +1,98 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./AboutContent.css";
 import aboutMe from "../../assets/aboutMePic.webp";
-import { FaLaptopCode, FaUserAlt, FaHeart } from "react-icons/fa";
+import { FaCode, FaServer, FaDatabase, FaTools } from "react-icons/fa";
 
 function AboutContent() {
-  const [activeTab, setActiveTab] = useState("parcours");
+  const [animated, setAnimated] = useState(false);
+
+  useEffect(() => {
+    setAnimated(true);
+  }, []);
+
+  const techSkills = [
+    { name: "HTML5/CSS3", level: 95, category: "frontend" },
+
+    { name: "Python", level: 50, category: "backend" },
+    { name: "JavaScript/ReactJS", level: 80, category: "frontend" },
+    { name: "MySQL", level: 75, category: "database" },
+    { name: "PHP/Symfony/Laravel", level: 80, category: "backend" },
+    { name: "PostgreSQL", level: 75, category: "database" },
+  ];
+
+  const tools = [
+    { name: "Git", level: "Avancé" },
+    { name: "UNIX", level: "Avancé" },
+    { name: "Docker", level: "Intermédiaire" },
+  ];
 
   return (
-    <div className="aboutContent" id="aboutme">
-      <h1 className="aboutTitle">
-        <FaLaptopCode className="iconTitle" /> À propos de moi
-      </h1>
+    <section className="about-section" id="aboutme">
+      <div className="about-container">
+        <h2 className="about-title">À propos de moi</h2>
 
-      <div className="aboutTabs">
-        <button
-          className={`tabButton ${activeTab === "parcours" ? "active" : ""}`}
-          onClick={() => setActiveTab("parcours")}
-        >
-          <FaLaptopCode /> Parcours
-        </button>
-        <button
-          className={`tabButton ${activeTab === "softskills" ? "active" : ""}`}
-          onClick={() => setActiveTab("softskills")}
-        >
-          <FaUserAlt /> Soft Skills
-        </button>
-        <button
-          className={`tabButton ${activeTab === "passions" ? "active" : ""}`}
-          onClick={() => setActiveTab("passions")}
-        >
-          <FaHeart /> Passions
-        </button>
-      </div>
+        <div className="about-content">
+          <div className="about-text-content">
+            <p className="about-description">
+              Passionné par le développement web et les nouvelles technologies,
+              j'intègre en septembre 2025 le{" "}
+              <span className="highlight">Master Of Science </span>
+              à Epitech Marseille, avec une spécialisation en intelligence
+              artificielle. Je recherche une{" "}
+              <span className="highlight">alternance</span> pour mettre en
+              pratique mes compétences et continuer à apprendre.
+            </p>
 
-      <div className="aboutContentContainer">
-        <div className="aboutContentImage">
-          <img src={aboutMe} alt="aboutMe" />
-        </div>
+            <div className="tech-stack-section">
+              <h3 className="tech-stack-title">
+                <FaCode className="icon" /> Mes compétences techniques
+              </h3>
 
-        <div className="aboutContentText">
-          {activeTab === "parcours" && (
-            <>
-              <p>
-                🎓 À 20 ans, je suis actuellement en troisième année de{" "}
-                <span className="progColor">BUT Informatique.</span>
-                <br />
-                <br></br>💻 Au cours de mes études, j'ai eu l'opportunité de
-                travailler avec plusieurs langages de programmation tels que
-                <span className="progColor">
-                  {" "}
-                  HTML, CSS, JavaScript, PHP, C++, Java...{" "}
-                </span>
-                et frameworks modernes comme
-                <span className="progColor">
-                  {" "}
-                  ReactJS, NextJS, Ionic, Laravel...
-                </span>
-                <br />
-                <br />
-              </p>
-              <p>
-                🚀 Après mon BUT, je souhaite poursuivre mes études vers un
-                <span className="progColor"> mastère</span> spécialisé dans le
-                domaine de l'intelligence artificielle.
-              </p>
-            </>
-          )}
+              <div className="tech-grid">
+                {techSkills.map((tech, index) => (
+                  <div className="tech-item" key={index}>
+                    <div className="tech-info">
+                      <span className="tech-name">{tech.name}</span>
+                      <span className="tech-level">{tech.level}%</span>
+                    </div>
+                    <div className="tech-bar-container">
+                      <div
+                        className="tech-bar"
+                        style={{
+                          width: animated ? `${tech.level}%` : "0%",
+                          "--fill-width": `${tech.level}%`,
+                        }}
+                      ></div>
+                    </div>
+                  </div>
+                ))}
+              </div>
 
-          {activeTab === "softskills" && (
-            <>
-              <p>🗣️ Soft Skills / Compétences humaines:</p>
-              <ul className="softSkillsList">
-                <br />
-                <li>💡 Créativité et capacité d’innovation</li>
-                <li>🤝 Travail en équipe et collaboration</li>
-                <li>🎯 Gestion du temps et organisation</li>
-                <li>📢 Communication et esprit de synthèse</li>
-              </ul>
-            </>
-          )}
+              <h3 className="tech-stack-title" style={{ marginTop: "2rem" }}>
+                <FaTools className="icon" /> Outils & Environnements
+              </h3>
 
-          {activeTab === "passions" && (
-            <>
-              <p>🎭 Mes passions et centres d'intérêt :</p>
-              <br />
-              <ul className="passionsList">
-                <li>💻 Développement Web</li>
-                <li>🩻 L'ergonomie</li>
-                <li>⌨️ La création de claviers customisés</li>
-              </ul>
-            </>
-          )}
+              <div className="tools-grid">
+                {tools.map((tool, index) => (
+                  <div className="tool-item" key={index}>
+                    <span className="tool-name">{tool.name}</span>
+                    <span className={`tool-level ${tool.level.toLowerCase()}`}>
+                      {tool.level}
+                    </span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          <div className="about-image-section">
+            <div className="image-container">
+              <img src={aboutMe} alt="Profil" className="profile-image" />
+            </div>
+          </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 

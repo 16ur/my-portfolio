@@ -15,7 +15,7 @@ function App() {
       <Navbar />
       <CoreContent />
       <AboutContent />
-      <TechStack />
+      {/* <TechStack /> */}
       <WorkCards />
       <Projects />
       <Contact />
