@@ -1,7 +1,9 @@
 import { useState, useEffect } from "react";
 import "./AboutContent.css";
 import aboutMe from "../../assets/aboutMePic.webp";
-import { FaCode, FaServer, FaDatabase, FaTools } from "react-icons/fa";
+import { ReactComponent as AvatarPC } from "../../assets/avatar-pc.svg";
+
+import { FaCode, FaTools } from "react-icons/fa";
 
 function AboutContent() {
   const [animated, setAnimated] = useState(false);
@@ -92,6 +94,7 @@ function AboutContent() {
           <div className="about-image-section">
             <div className="image-container">
               <img src={aboutMe} alt="Profil" className="profile-image" />
+              {/* <AvatarPC className="profile-svg" /> */}
             </div>
           </div>
         </div>
