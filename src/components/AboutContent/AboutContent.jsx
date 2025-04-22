@@ -23,6 +23,7 @@ function AboutContent() {
   const tools = [
     { name: "Git", level: "Avancé" },
     { name: "UNIX", level: "Avancé" },
+    { name: "Agilité", level: "Avancé" },
     { name: "Docker", level: "Intermédiaire" },
   ];
 
@@ -38,9 +39,12 @@ function AboutContent() {
               j'intègre en septembre 2025 le{" "}
               <span className="highlight">Master Of Science </span>
               à Epitech Marseille, avec une spécialisation en intelligence
-              artificielle. Je recherche une{" "}
-              <span className="highlight">alternance</span> pour mettre en
-              pratique mes compétences et continuer à apprendre.
+              artificielle. <br /> <br />
+              Afin d'intégrer mon école, je recherche activement une entreprise
+              où effectuer mon {""}
+              <span className="highlight">alternance</span> pendant deux ans,
+              afin de mettre en pratique mes compétences et de continuer à
+              apprendre dans le domaine du développement web.
             </p>
 
             <div className="tech-stack-section">
