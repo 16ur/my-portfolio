@@ -14,8 +14,8 @@ function WorkCards() {
   const experiences = [
     {
       id: 0,
-      title: "Développeur Web Back-end",
-      date: "Février 2025 - Aujourd'hui",
+      title: "Stage Développeur Web Back-end",
+      date: "Février 2025 - Juin 2025",
       company: "Albalogic",
       location: "Aubagne, France",
       description:

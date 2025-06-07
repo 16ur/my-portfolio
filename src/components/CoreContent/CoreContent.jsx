@@ -15,11 +15,10 @@ function CoreContent() {
             , je suis <span className="colorText">Axel Manguian</span>
           </h1>
           <h2 className="coreContentSubtitle">
-            Développeur Web Full-Stack basé en France 🇫🇷
+            Développeur Web Full-Stack à Marseille  🇫🇷
           </h2>
           <p className="descriptionCore">
-            J'adore créer des interfaces modernes et des sites web interactifs,
-            en me concentrant sur des expériences utilisateur optimales.
+          Fraîchement diplômé, je me spécialise dans le développement web full-stack, avec l’envie constante d’apprendre et d’innover.
           </p>
           <div className="buttonsContainer">
             <a href="#aboutme">

@@ -37,16 +37,17 @@ function AboutContent() {
         <div className="about-content">
           <div className="about-text-content">
             <p className="about-description">
-              Passionné par le développement web et les nouvelles technologies,
-              j'intègre en septembre 2025 le{" "}
-              <span className="highlight">Master Of Science </span>
-              à Epitech Marseille, avec une spécialisation en intelligence
-              artificielle. <br /> <br />
-              Afin d'intégrer mon école, je recherche activement une entreprise
-              où effectuer mon {""}
-              <span className="highlight">alternance</span> pendant deux ans,
-              afin de mettre en pratique mes compétences et de continuer à
-              apprendre dans le domaine du développement web.
+              Tout juste diplômé d'un BUT Informatique, j'intègre en septembre 2025 le{" "}
+              <span className="highlight">Master of Science</span> d'Epitech
+              Marseille, avec la volonté de me spécialiser dans deux domaines
+              qui façonnent le futur : la data et l'intelligence artificielle.
+              <br />
+              <br />
+              Curieux, autonome et passionné, j'ai affiné mon intérêt pour le
+              développement web au fil de ma formation et de mes expériences
+              professionnelles. <br /> <br />Ce qui m'anime aujourd'hui ? Participer à des
+              projets qui ont du sens, apprendre sans
+              cesse, et implémenter des solutions innovantes.
             </p>
 
             <div className="tech-stack-section">

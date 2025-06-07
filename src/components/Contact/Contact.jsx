@@ -9,9 +9,6 @@ function Contact() {
         <h2 className="section-title">
           <span>Contact</span>
         </h2>
-        <p className="section-subtitle">
-          Disponible pour discuter de nouvelles opportunités
-        </p>
 
         <div className="contact-grid">
           <div className="contact-card">

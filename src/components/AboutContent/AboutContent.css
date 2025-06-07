@@ -61,6 +61,7 @@
   line-height: 1.7;
   color: #d1d5db;
   margin-bottom: 2.5rem;
+  text-align: justify;
 }
 
 .tech-stack-section {
@@ -192,7 +193,7 @@
 }
 
 .tech-stack-title .icon {
-  color: #3b82f6;
+  color: #bca788;;
 }
 
 .tech-info {
