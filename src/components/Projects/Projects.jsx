@@ -1,9 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./Projects.css";
-import Keycrafted from "../../assets/keycrafted.webp";
-import NearMTP from "../../assets/nearmtp.webp";
-import Finder from "../../assets/finder.webp";
-import { FaGithub, FaExternalLinkAlt, FaCode } from "react-icons/fa";
 
 function Projects() {
   const [showModal, setShowModal] = useState(false);
@@ -16,11 +12,6 @@ function Projects() {
         "Site e-commerce de claviers mécaniques personnalisés avec fonctionnalités avancées et paiement sécurisé.",
       link: "https://github.com/16ur/keycrafted",
       technologies: ["React.js", "Express.js", "MongoDB", "Stripe API"],
-      image: Keycrafted,
-      features: [
-        "Paiement sécurisé avec Stripe",
-        "Backend performant avec Express.js",
-      ],
     },
     {
       id: 3,
@@ -29,12 +20,6 @@ function Projects() {
         "Plateforme de mise en relation entre particuliers et professionnels pour des services à domicile.",
       link: null,
       technologies: ["Laravel", "MySQL", "WebSockets", "Docker"],
-      image: Finder,
-      features: [
-        "Messagerie en temps réel",
-        "Système de notation et avis",
-        "Sécurité des données avec Laravel",
-      ],
     },
     {
       id: 4,
@@ -43,12 +28,6 @@ function Projects() {
         "Application de découverte d'activités locales à Montpellier avec filtres avancés de recherche.",
       link: "https://github.com/16ur/nearMTP",
       technologies: ["React.js", "Express.js", "MongoDB"],
-      image: NearMTP,
-      features: [
-        "Filtres personnalisables",
-        "Interface utilisateur intuitive",
-        "Création d'API RESTful avec Express.js",
-      ],
     },
   ];
 
@@ -67,70 +46,41 @@ function Projects() {
   return (
     <section className="projects-section" id="projects">
       <div className="projects-container">
-        <h2 className="projects-title">Mes Projets</h2>
-        <p className="projects-subtitle">
-          Une sélection de mes réalisations les plus significatives
-        </p>
+        <h2 className="projects-title">Projets</h2>
 
-        <div className="projects-grid">
+        <div className="projects-list">
           {projects.map((project) => (
-            <div className="project-card" key={project.id}>
-              <div className="project-image-container">
-                <img
-                  src={project.image}
-                  alt={project.title}
-                  className="project-image"
-                  loading="lazy"
-                />
-                <div className="project-overlay">
-                  <h3>{project.title}</h3>
-                  <div className="project-links">
-                    {project.link ? (
-                      <>
-                        <button
-                          onClick={() => handleLinkClick(project.link)}
-                          className="project-link"
-                        >
-                          <FaGithub /> Code
-                        </button>
-                        {project.demo && (
-                          <button className="project-link">
-                            <FaExternalLinkAlt /> Demo
-                          </button>
-                        )}
-                      </>
-                    ) : (
-                      <button
-                        onClick={() => setShowModal(true)}
-                        className="project-link"
-                      >
-                        <FaCode /> Détails
-                      </button>
-                    )}
-                  </div>
-                </div>
+            <div className="project-item" key={project.id}>
+              <div className="project-header">
+                <h3 className="project-name">{project.title}</h3>
+                {project.link && (
+                  <a
+                    href={project.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
+                  >
+                    Voir sur GitHub
+                  </a>
+                )}
+                {!project.link && (
+                  <button
+                    onClick={() => setShowModal(true)}
+                    className="project-link-btn"
+                  >
+                    Projet confidentiel
+                  </button>
+                )}
               </div>
 
-              <div className="project-content">
-                <h3 className="project-name">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
+              <p className="project-description">{project.description}</p>
 
-                <div className="project-features">
-                  <h4>Fonctionnalités clés :</h4>
-                  <ul>
-                    {project.features.map((feature, index) => (
-                      <li key={index}>{feature}</li>
-                    ))}
-                  </ul>
-                </div>
-
-                <div className="project-technologies">
-                  {project.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">
-                      {tech}
-                    </span>
-                  ))}
-                </div>
+              <div className="project-technologies">
+                {project.technologies.map((tech, index) => (
+                  <span key={index} className="tech-tag">
+                    {tech}
+                  </span>
+                ))}
               </div>
             </div>
           ))}
@@ -140,12 +90,12 @@ function Projects() {
       {showModal && (
         <div className="modal-backdrop" onClick={closeModal}>
           <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3>Projet académique confidentiel</h3>
-            <p>
+            <h3 className="modal-title">Projet académique confidentiel</h3>
+            <p className="modal-text">
               Ce projet a été réalisé dans le cadre de ma formation et ne peut
               être partagé publiquement pour des raisons de confidentialité.
             </p>
-            <p>
+            <p className="modal-text">
               Je serais ravi d'en discuter en entretien et de vous présenter des
               extraits de code si nécessaire.
             </p>

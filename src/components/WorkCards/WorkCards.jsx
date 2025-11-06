@@ -1,12 +1,5 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import "./WorkCards.css";
-import {
-  FaCode,
-  FaBriefcase,
-  FaCalendarAlt,
-  FaMapMarkerAlt,
-  FaBuilding,
-} from "react-icons/fa";
 
 function WorkCards() {
   const [filter, setFilter] = useState("all");
@@ -114,7 +107,7 @@ function WorkCards() {
   return (
     <section className="work-section" id="work">
       <div className="work-container">
-        <h2 className="work-title">Mes Expériences Professionnelles</h2>
+        <h2 className="work-title">Expériences</h2>
 
         <div className="filter-buttons">
           <button
@@ -124,12 +117,10 @@ function WorkCards() {
             Toutes
           </button>
           <button
-            className={`filter-btn ${
-              filter === "informatique" ? "active" : ""
-            }`}
+            className={`filter-btn ${filter === "informatique" ? "active" : ""}`}
             onClick={() => setFilter("informatique")}
           >
-            Développement
+            Informatique
           </button>
           <button
             className={`filter-btn ${filter === "autre" ? "active" : ""}`}
@@ -139,40 +130,32 @@ function WorkCards() {
           </button>
         </div>
 
-        <div className="experiences-grid">
+        <div className="experiences-list">
           {filteredExperiences.map((exp) => (
-            <div className="experience-card" key={exp.id}>
-              <div className="card-header">
-                <h3>{exp.title}</h3>
-                <div className="company-badge">
-                  <FaBuilding className="icon" />
-                  <span>{exp.company}</span>
-                </div>
+            <div className="experience-item" key={exp.id}>
+              <div className="experience-header">
+                <h3 className="experience-title">{exp.title}</h3>
+                <p className="experience-company">{exp.company}</p>
               </div>
 
-              <div className="card-details">
-                <div className="detail-item">
-                  <FaCalendarAlt className="icon" />
-                  <span>{exp.date}</span>
-                </div>
-                <div className="detail-item">
-                  <FaMapMarkerAlt className="icon" />
-                  <span>{exp.location}</span>
-                </div>
+              <div className="experience-meta">
+                <span className="experience-date">{exp.date}</span>
+                <span className="experience-divider">•</span>
+                <span className="experience-location">{exp.location}</span>
                 {exp.contractType && (
-                  <div className="detail-item">
-                    <FaBriefcase className="icon" />
-                    <span>{exp.contractType}</span>
-                  </div>
+                  <>
+                    <span className="experience-divider">•</span>
+                    <span className="experience-type">{exp.contractType}</span>
+                  </>
                 )}
               </div>
 
-              <p className="card-description">{exp.description}</p>
+              <p className="experience-description">{exp.description}</p>
 
               {exp.technologies && (
-                <div className="tech-tags">
+                <div className="experience-tags">
                   {exp.technologies.map((tech, index) => (
-                    <span key={index} className="tech-tag">
+                    <span key={index} className="tag">
                       {tech}
                     </span>
                   ))}
@@ -180,9 +163,9 @@ function WorkCards() {
               )}
 
               {exp.skills && (
-                <div className="skill-tags">
+                <div className="experience-tags">
                   {exp.skills.map((skill, index) => (
-                    <span key={index} className="skill-tag">
+                    <span key={index} className="tag">
                       {skill}
                     </span>
                   ))}
