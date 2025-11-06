@@ -13,12 +13,13 @@ function App() {
     <>
       <Analytics />
       <Navbar />
-      <CoreContent />
-      <AboutContent />
-      {/* <TechStack /> */}
-      <WorkCards />
-      <Projects />
-      <Contact />
+      <div className="scroll-container">
+        <CoreContent />
+        <AboutContent />
+        <WorkCards />
+        <Projects />
+        <Contact />
+      </div>
     </>
   );
 }
