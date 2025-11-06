@@ -2,19 +2,34 @@ import "./AboutContent.css";
 
 function AboutContent() {
   const techSkills = [
-    "HTML5/CSS3",
-    "JavaScript/ReactJS",
-    "PHP/Symfony/Laravel",
+    "HTML/CSS",
+    "JavaScript",
+    "React.js",
+    "Node.js",
+    "Express.js",
+    "PHP Symfony",
+    "PHP Laravel",
+    "C++",
     "MySQL",
     "PostgreSQL",
     "Python",
+    "FastAPI",
   ];
 
   const tools = [
     "Git",
-    "UNIX",
-    "Agilité",
+    "Linux",
+    "Bash",
     "Docker",
+  ];
+
+  const softSkills = [
+    "Travail en équipe",
+    "Communication",
+    "Résolution de problèmes",
+    "Adaptabilité",
+    "Gestion du temps",
+    "Pensée critique",
   ];
 
   return (
@@ -24,15 +39,15 @@ function AboutContent() {
 
         <div className="about-content">
           <p className="about-description">
-            Tout juste diplômé d'un BUT Informatique, j'intègre en septembre 2025 le
-            Master of Science d'Epitech Marseille, avec la volonté de me spécialiser
-            dans deux domaines qui façonnent le futur : la data et l'intelligence artificielle.
+            Diplômé d'un BUT Informatique, je continue mon parcours avec un
+            <strong> Master of Science à Epitech Marseille</strong>, avec la volonté de me spécialiser
+            dans deux domaines qui, selon moi, façonnent le futur : la <strong>data</strong> et <strong>l'intelligence artificielle</strong>.
           </p>
 
           <p className="about-description">
             Curieux, autonome et passionné, j'ai affiné mon intérêt pour le développement
             web au fil de ma formation et de mes expériences professionnelles.
-            Ce qui m'anime aujourd'hui ? Participer à des projets qui ont du sens,
+            Ce qui m'anime aujourd'hui ? Participer à des projets porteurs de sens,
             apprendre sans cesse, et implémenter des solutions innovantes.
           </p>
 
@@ -53,6 +68,16 @@ function AboutContent() {
               {tools.map((tool, index) => (
                 <span className="skill-tag" key={index}>
                   {tool}
+                </span>
+              ))}
+            </div>
+          </div>
+          <div className="skills-section">
+            <h3 className="skills-title">Compétences humaines</h3>
+            <div className="skills-list">
+              {softSkills.map((skill, index) => (
+                <span className="skill-tag" key={index}>
+                  {skill}
                 </span>
               ))}
             </div>

@@ -3,7 +3,7 @@ import CV from "../../assets/CV_AXEL_MANGUIAN.pdf";
 
 function CoreContent() {
   return (
-    <div className="coreContent" id="home">
+    <section className="coreContent" id="home">
       <div className="contentWrapper">
         <div className="textContainer">
           <p className="greeting">Bonjour, je suis</p>
@@ -25,7 +25,7 @@ function CoreContent() {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 }
 
