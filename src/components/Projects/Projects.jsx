@@ -3,150 +3,149 @@ import "./Projects.css";
 
 function Projects() {
   const [showModal, setShowModal] = useState(false);
-  const [expandedProject, setExpandedProject] = useState(null);
+  const [hoveredId, setHoveredId] = useState(null);
 
   const projects = [
     {
-      id: 2,
+      id: 1,
       title: "KeyCrafted",
-      description:
-        "Site e-commerce de claviers mécaniques personnalisés avec fonctionnalités avancées et paiement sécurisé.",
-      link: "https://github.com/16ur/keycrafted",
+      category: "E-commerce",
+      description: "Site e-commerce de claviers mécaniques personnalisés avec paiement sécurisé.",
       technologies: ["React.js", "Express.js", "MongoDB", "Docker"],
-      details: [
-        "Système d'authentification JWT avec gestion des sessions",
-        "Intégration de Stripe pour les paiements sécurisés",
-        "Gestion complète du panier et des commandes",
-        "Interface d'administration pour la gestion des produits, des commandes et des utilisateurs"
+      link: "https://github.com/16ur/keycrafted",
+      features: [
+        "Authentification JWT",
+        "Integration Stripe",
+        "Gestion du panier",
+        "Interface d'administration",
+      ],
+    },
+    {
+      id: 2,
+      title: "Finder",
+      category: "Marketplace",
+      description: "Plateforme de mise en relation pour des services à domicile.",
+      technologies: ["Laravel", "MySQL", "WebSockets", "Docker"],
+      link: null,
+      features: [
+        "Chat en temps réel",
+        "Recherche avancée",
+        "Système de notation",
+        "Panel admin",
       ],
     },
     {
       id: 3,
-      title: "Finder",
-      description:
-        "Plateforme de mise en relation entre particuliers et professionnels pour des services à domicile.",
-      link: null,
-      technologies: ["Laravel", "MySQL", "WebSockets", "Docker"],
-      details: [
-        "Chat en temps réel entre utilisateurs via WebSockets",
-        "Recherche avancée avec filtres par localisation, disponibilité et avis",
-        "Système d'évaluation et de notation",
-        "Conteneurisation avec Docker pour un déploiement simplifié",
-        "Interface d'administration pour la validation des professionnels et la gestion des contenus"
-      ],
-    },
-    {
-      id: 4,
       title: "Horas",
-      description:
-        "Plateforme permettant aux employés d'émarger et de suivre leurs heures de travail facilement.",
-      link: "https://github.com/AadiDevv/Horas/",
+      category: "SaaS",
+      description: "Plateforme de suivi des heures de travail pour les employés.",
       technologies: ["React.js", "Express.js", "PostgreSQL", "Docker"],
-      details: [
-        "Système d'authentification sécurisé avec JWT",
-        "Tableau de bord interactif pour le suivi des heures",
-        "Génération de KPI et rapports personnalisés",
-        "Interface d'administration pour la gestion des utilisateurs et des données"
+      link: "https://github.com/AadiDevv/Horas/",
+      features: [
+        "Tableau de bord interactif",
+        "Génération de KPI",
+        "Rapports personnalisés",
+        "Gestion des utilisateurs",
       ],
     },
   ];
 
-  const handleLinkClick = (link) => {
-    if (!link) {
-      setShowModal(true);
-    } else {
-      window.open(link, "_blank", "noopener,noreferrer");
-    }
-  };
-
-  const closeModal = () => {
-    setShowModal(false);
-  };
-
-  const toggleDetails = (projectId) => {
-    setExpandedProject(expandedProject === projectId ? null : projectId);
-  };
-
   return (
-    <section className="projects-section" id="projects">
-      <div className="projects-container">
-        <h2 className="projects-title">Projets</h2>
+    <section className="projects" id="projects" data-section="04 — PROJETS">
+      <div className="projects-content">
+        <header className="projects-header">
+          <span className="projects-label">Projets</span>
+          <h2 className="projects-title">
+            Mes<br />
+            <span className="projects-title-accent">projets</span>
+          </h2>
+        </header>
 
-        <div className="projects-list">
+        <div className="projects-grid">
           {projects.map((project) => (
-            <div className="project-item" key={project.id}>
-              <div className="project-header">
-                <h3 className="project-name">{project.title}</h3>
-                {project.link && (
+            <article
+              key={project.id}
+              className={`project-card ${hoveredId === project.id ? "hovered" : ""}`}
+              onMouseEnter={() => setHoveredId(project.id)}
+              onMouseLeave={() => setHoveredId(null)}
+            >
+              <div className="project-card-header">
+                <span className="project-category">{project.category}</span>
+              </div>
+
+              <div className="project-card-body">
+                <h3 className="project-title">{project.title}</h3>
+                <p className="project-description">{project.description}</p>
+
+                <ul className="project-features">
+                  {project.features.map((feature, index) => (
+                    <li key={index}>{feature}</li>
+                  ))}
+                </ul>
+              </div>
+
+              <div className="project-card-footer">
+                <div className="project-technologies">
+                  {project.technologies.map((tech) => (
+                    <span key={tech} className="project-tech">{tech}</span>
+                  ))}
+                </div>
+
+                {project.link ? (
                   <a
                     href={project.link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="project-link"
                   >
-                    Voir sur GitHub
+                    <span>Voir le projet</span>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <path d="M4 10L10 4M10 4H5M10 4V9" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"/>
+                    </svg>
                   </a>
-                )}
-                {!project.link && (
+                ) : (
                   <button
                     onClick={() => setShowModal(true)}
-                    className="project-link-btn"
+                    className="project-link project-link-private"
                   >
-                    Projet confidentiel
+                    <span>Projet confidentiel</span>
+                    <svg width="14" height="14" viewBox="0 0 14 14" fill="none">
+                      <rect x="2" y="6" width="10" height="7" rx="1" stroke="currentColor" strokeWidth="1.5"/>
+                      <path d="M4 6V4a3 3 0 116 0v2" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round"/>
+                    </svg>
                   </button>
                 )}
               </div>
 
-              <p className="project-description">{project.description}</p>
-
-              <div className="project-technologies">
-                {project.technologies.map((tech, index) => (
-                  <span key={index} className="tech-tag">
-                    {tech}
-                  </span>
-                ))}
-              </div>
-
-              {project.details && (
-                <>
-                  <button
-                    className="details-toggle"
-                    onClick={() => toggleDetails(project.id)}
-                    aria-label="Afficher les détails"
-                  >
-                    <span>Détails</span>
-                    <span className={`arrow ${expandedProject === project.id ? "expanded" : ""}`}>
-                      ›
-                    </span>
-                  </button>
-
-                  <div className={`project-details ${expandedProject === project.id ? "expanded" : ""}`}>
-                    <ul className="details-list">
-                      {project.details.map((detail, index) => (
-                        <li key={index}>{detail}</li>
-                      ))}
-                    </ul>
-                  </div>
-                </>
-              )}
-            </div>
+              <div className="project-card-accent"></div>
+            </article>
           ))}
         </div>
       </div>
 
       {showModal && (
-        <div className="modal-backdrop" onClick={closeModal}>
-          <div className="modal-content" onClick={(e) => e.stopPropagation()}>
-            <h3 className="modal-title">Projet académique confidentiel</h3>
-            <p className="modal-text">
-              Ce projet a été réalisé dans le cadre de ma formation et ne peut
-              être partagé publiquement pour des raisons de confidentialité.
-            </p>
-            <p className="modal-text">
-              Je serais ravi d'en discuter en entretien et de vous présenter des
-              extraits de code si nécessaire.
-            </p>
-            <button className="modal-close-btn" onClick={closeModal}>
+        <div className="modal-overlay" onClick={() => setShowModal(false)}>
+          <div className="modal" onClick={(e) => e.stopPropagation()}>
+            <div className="modal-header">
+              <span className="modal-icon">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                  <rect x="3" y="11" width="18" height="11" rx="2" stroke="currentColor" strokeWidth="2"/>
+                  <path d="M7 11V7a5 5 0 0110 0v4" stroke="currentColor" strokeWidth="2" strokeLinecap="round"/>
+                </svg>
+              </span>
+              <h3 className="modal-title">Projet confidentiel</h3>
+            </div>
+            <div className="modal-body">
+              <p>
+                Ce projet a été réalisé dans le cadre de ma formation et ne peut être
+                partagé publiquement pour des raisons de confidentialité.
+              </p>
+              <p>
+                Je serais ravi d'en discuter en entretien et de vous présenter des
+                extraits de code si nécessaire.
+              </p>
+            </div>
+            <button className="modal-close" onClick={() => setShowModal(false)}>
               Compris
             </button>
           </div>
