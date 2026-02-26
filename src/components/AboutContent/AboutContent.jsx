@@ -16,7 +16,7 @@ function AboutContent() {
     },
     {
       category: "Tools",
-      items: ["Git", "Docker", "Linux", "Bash", "uv", "Ruff"],
+      items: ["Git", "Docker", "Linux", "Bash", "uv", "ty", "Ruff"],
     },
   ];
 
@@ -47,7 +47,7 @@ function AboutContent() {
 
           <div className="about-stats">
             <div className="stat-item">
-              <span className="stat-number">2+</span>
+              <span className="stat-number">4+</span>
               <span className="stat-label">Experiences pro</span>
             </div>
             <div className="stat-item">
