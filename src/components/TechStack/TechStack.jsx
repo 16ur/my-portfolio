@@ -9,12 +9,10 @@ import {
   FaPython,
   FaPhp,
   FaLaravel,
-  FaDatabase,
   FaGitAlt,
   FaDocker,
 } from "react-icons/fa";
 import {
-  SiTailwindcss,
   SiMysql,
   SiMongodb,
   SiPostgresql,

@@ -1,8 +1,12 @@
 import { useState, useEffect, useCallback } from "react";
 import "./Projects.css";
-import keycraftedImg from "../../assets/keycrafted.webp";
-import finderImg from "../../assets/finder.webp";
-import horasImg from "../../assets/nearmtp.webp";
+import keycraftedImg from "../../assets/KeyCrafted/keycrafted.webp";
+import finderImg from "../../assets/Finder/finder.webp";
+import horas_dashboard_employe from "../../assets/Horas/dashboard_employe.webp";
+import horas_dashboard_manager from "../../assets/Horas/dashboard_manager.webp";
+import horas_absence_employe from "../../assets/Horas/absence_employe.webp";
+import horas_gestion_pointages from "../../assets/Horas/gestion_pointages.webp";
+
 
 function Projects() {
   const [activeId, setActiveId] = useState(1);
@@ -47,7 +51,7 @@ function Projects() {
         "Génération de rapports et export PDF",
         "Gestion multi-équipes et permissions",
       ],
-      images: [],
+      images: [horas_dashboard_employe, horas_dashboard_manager, horas_absence_employe, horas_gestion_pointages],
       link: "https://github.com/AadiDevv/Horas/",
       confidential: false,
     },
@@ -89,7 +93,7 @@ function Projects() {
       link: null,
       confidential: true,
     },
-  
+
   ];
 
   const activeProject = projects.find((p) => p.id === activeId);

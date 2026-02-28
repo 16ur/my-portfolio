@@ -30,13 +30,6 @@ function Contact() {
 
         <div className="contact-details">
           <div className="contact-block">
-            <span className="contact-block-label">Téléphone</span>
-            <a href="tel:+33783515141" className="contact-block-value">
-              +33 7 83 51 51 41
-            </a>
-          </div>
-
-          <div className="contact-block">
             <span className="contact-block-label">Localisation</span>
             <span className="contact-block-value">Marseille, France</span>
           </div>
