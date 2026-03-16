@@ -6,6 +6,8 @@ import horas_dashboard_employe from "../../assets/Horas/dashboard_employe.webp";
 import horas_dashboard_manager from "../../assets/Horas/dashboard_manager.webp";
 import horas_absence_employe from "../../assets/Horas/absence_employe.webp";
 import horas_gestion_pointages from "../../assets/Horas/gestion_pointages.webp";
+import horas_landing_page from "../../assets/Horas/landing_page.webp";
+import rawlog_landing_page from "../../assets/Rawlog/rawlog_landing.webp"
 
 
 function Projects() {
@@ -32,7 +34,7 @@ function Projects() {
         "Documentation API automatique avec Swagger"
 
       ],
-      images: [],
+      images: [rawlog_landing_page],
       link: "https://github.com/16ur/rawlog",
       confidential: false,
     },
@@ -51,7 +53,7 @@ function Projects() {
         "Génération de rapports et export PDF",
         "Gestion multi-équipes et permissions",
       ],
-      images: [horas_dashboard_employe, horas_dashboard_manager, horas_absence_employe, horas_gestion_pointages],
+      images: [horas_landing_page,horas_dashboard_employe, horas_dashboard_manager, horas_absence_employe, horas_gestion_pointages],
       link: "https://github.com/AadiDevv/Horas/",
       confidential: false,
     },
